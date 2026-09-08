@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial - WDD 231</title>
+  <meta name="description" content="Página inicial do curso WDD 231 - Desenvolvimento Frontend para Web I">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilo/normalize.css">
+  <link rel="stylesheet" href="estilo/telas-pequenas.css">
+  <link rel="stylesheet" href="estilo/maior.css">
+
+  <!-- Scripts JS com defer -->
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="logo-container">
+    <img src="imagens/logo.svg" alt="Logotipo do site" width="40" height="40">
+    <span>Igor Mota</span>
+  </div>
+  <button id="menu-hamburguer" aria-label="Abrir Menu">☰</button>
+  <nav id="menu-nav">
+    <ul>
+      <li><a href="index.html" class="active">Página Inicial</a></li>
+      <li><a href="#">Projeto da Câmara</a></li>
+      <li><a href="#">Projeto Final</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <h1>Página Inicial</h1>
+
+    <div class="grid-layout">
+      <!-- Seção Sobre Mim -->
+      <section class="card">
+        <h2>Sobre Mim</h2>
+        <p>Sou um profissional em transição de carreira, migrando da área comercial/financeira para o desenvolvimento de software. Ao longo da minha trajetória, atuei com sistemas corporativos como SAP, Salesforce, Pega e Bitrix, o que me deu uma base sólida em processos de negócio e me despertou o interesse em automatizar e otimizar fluxos de trabalho através da programação.
+
+Atualmente curso Desenvolvimento de Software pela BYU-Pathway Worldwide e Sistemas de Informação pela Universidade Positivo, aprofundando meus conhecimentos em Python, desenvolvimento web e boas práticas de engenharia de software. Já desenvolvi projetos como uma automação de base de inadimplência (com pandas, tkinter e testes automatizados) e um pipeline de BI/comissões com dashboard em Streamlit, hospedado na AWS.
+
+Meu objetivo é construir uma carreira sólida em desenvolvimento, unindo minha experiência prática em sistemas corporativos com habilidades técnicas de programação, com foco especial em Python e automação.</p>
+      </section>
+
+      <!-- Seção Foto -->
+      <section class="card foto-card">
+        <h2>Foto</h2>
+        <img src="imagens/minha-foto.webp" alt="Foto de Perfil" loading="lazy">
+      </section>
+    </div>
+
+    <!-- Seção Cursos -->
+    <section class="card cursos-section">
+      <h2>Cursos de Certificação Web</h2>
+      <div class="filtros">
+        <button id="btn-todos">Todos</button>
+        <button id="btn-wdd">WDD</button>
+        <button id="btn-cse">CSE</button>
+      </div>
+      <div id="container-cursos" class="grid-cursos">
+        <!-- Os cartões dos cursos serão inseridos via JavaScript -->
+      </div>
+      <p id="total-creditos"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="redes-sociais">
+      <a href="https://github.com/motaigr" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/igor-augusto-mota-gonçalves-b85571234" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>© <span id="anoAtual"></span> | Igor Mota | Curitiba, Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
+</body>
+</html>

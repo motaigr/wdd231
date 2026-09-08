@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2b6cb0;
+  --bg-color: #f7fafc;
+  --text-color: #2d3748;
+  --completed-bg: #d4edda;
+  --completed-border: #c3e6cb;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#menu-hamburguer {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--secondary-color);
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.foto-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filtros button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.grid-cursos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.curso-card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* Estilo para cursos concluídos */
+.curso-card.concluido {
+  background-color: var(--completed-bg);
+  border-color: var(--completed-border);
+  color: #155724;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ebf8ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Esconde o menu em telas pequenas por padrão */
+#menu-nav {
+  display: none;
+  width: 100%;
+}
+
+/* Exibe o menu quando for clicado */
+#menu-nav.open {
+  display: block;
+}
+
+#menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-nav a {
+  display: block;
+  padding: 0.8rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Mantém a referência para o menu absoluto */
+}
+
+#menu-nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  z-index: 1000;
+}
+
+#menu-nav.open {
+  display: block;
+}

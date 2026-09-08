@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+  #menu-hamburguer {
+    display: none; /* Esconde o botão em telas grandes */
+  }
+
+  #menu-nav {
+    display: block !important; /* Força a exibição contínua */
+    width: auto;
+  }
+
+  #menu-nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+}
