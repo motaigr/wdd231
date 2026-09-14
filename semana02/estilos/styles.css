@@ -1,0 +1,339 @@
+/* =========================================================
+   VARIÁVEIS GLOBAIS (Design Tokens)
+   Centralizar cores/tamanhos facilita manutenção e garante
+   consistência visual em todo o projeto.
+   ========================================================= */
+:root {
+  --cor-primaria: #0b3d2e;      /* verde escuro institucional */
+  --cor-secundaria: #d4af37;    /* dourado - remete ao nível "ouro" */
+  --cor-prata: #9aa5b1;
+  --cor-fundo: #f4f6f5;
+  --cor-texto: #1c1f1e;
+  --cor-branco: #ffffff;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --raio: 8px;
+  --fonte-principal: "Segoe UI", Verdana, Arial, sans-serif;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  width: 100%;
+}
+
+/* =========================================================
+   CABEÇALHO
+   Mobile-first: por padrão o menu fica oculto e vira um
+   dropdown ativado pelo botão hambúrguer. A partir de 768px
+   o menu horizontal aparece e o botão é escondido.
+   ========================================================= */
+.site-header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--sombra);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.brand-name span {
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+}
+
+.menu-toggle .bar {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--cor-branco);
+  border-radius: 2px;
+}
+
+/* Navegação: escondida por padrão em telas pequenas, vira dropdown */
+.primary-nav {
+  display: none;
+  width: 100%;
+  order: 3;
+}
+
+.primary-nav.open {
+  display: block;
+}
+
+.primary-nav ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.75rem;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.65rem 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.95rem;
+}
+
+.primary-nav a.active {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+}
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+.directory-intro h1 {
+  font-size: 1.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.directory-intro p {
+  font-size: 0.95rem;
+  max-width: 60ch;
+  margin-bottom: 1rem;
+}
+
+/* Controles de alternância Grid/Lista */
+.view-controls {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-btn svg {
+  fill: currentColor;
+}
+
+.view-btn.active,
+.view-btn:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+/* =========================================================
+   ÁREA DE MEMBROS
+   Duas variações controladas via JS: grid-view e list-view.
+   Mobile-first: em telas pequenas o grid vira 1 coluna.
+   ========================================================= */
+.members-container {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.members-container.grid-view {
+  grid-template-columns: 1fr; /* 1 coluna no mobile */
+}
+
+.members-container.list-view {
+  grid-template-columns: 1fr; /* lista sempre em coluna única, mas cartões mais "achatados" */
+}
+
+.loading-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--cor-primaria);
+}
+
+/* Cartão de membro (compartilhado entre grid e lista, com pequenas variações) */
+.member-card {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--cor-prata); /* cor trocada via classe de nível */
+}
+
+.member-card.level-1 { border-top-color: var(--cor-prata); }
+.member-card.level-2 { border-top-color: #c0c0c0; }
+.member-card.level-3 { border-top-color: var(--cor-secundaria); }
+
+.member-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background-color: #e5e5e5; /* placeholder enquanto a imagem fictícia não existe */
+}
+
+.member-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.member-info h2 {
+  font-size: 1.05rem;
+  color: var(--cor-primaria);
+}
+
+.member-info p {
+  font-size: 0.85rem;
+}
+
+.membership-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: var(--cor-branco);
+}
+
+.membership-badge.level-1 { background-color: var(--cor-prata); }
+.membership-badge.level-2 { background-color: #8c8c8c; }
+.membership-badge.level-3 { background-color: var(--cor-secundaria); color: var(--cor-texto); }
+
+.member-info a.website-link {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-decoration: underline;
+  align-self: flex-start;
+}
+
+/* Layout específico para o modo LISTA: imagem ao lado do texto */
+.list-view .member-card {
+  flex-direction: row;
+  border-top: none;
+  border-left: 4px solid var(--cor-prata);
+}
+
+.list-view .member-card.level-1 { border-left-color: var(--cor-prata); }
+.list-view .member-card.level-2 { border-left-color: #c0c0c0; }
+.list-view .member-card.level-3 { border-left-color: var(--cor-secundaria); }
+
+.list-view .member-card img {
+  width: 110px;
+  height: auto;
+  min-height: 110px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+.site-footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.8rem;
+}
+
+.footer-container p {
+  margin: 0.15rem 0;
+}
+
+/* =========================================================
+   MEDIA QUERIES - abordagem MOBILE-FIRST
+   As regras acima já cobrem 320px+. A partir daqui, ampliamos
+   o layout para telas médias e grandes.
+   ========================================================= */
+
+/* Tablets (~600px) */
+@media (min-width: 600px) {
+  .members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktops pequenos / tablets grandes (~768px) */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* menu horizontal substitui o hambúrguer */
+  }
+
+  .primary-nav {
+    display: block;
+    width: auto;
+    order: 2;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    padding-top: 0;
+    gap: 0.5rem;
+  }
+
+  .primary-nav a {
+    border-top: none;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .directory-intro h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktops (~1000px) */
+@media (min-width: 1000px) {
+  .members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
