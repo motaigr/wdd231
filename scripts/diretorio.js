@@ -45,12 +45,12 @@ function criarCartaoMembro(empresa) {
   const card = document.createElement("article");
   card.className = `member-card level-${empresa.membership_level}`;
 
-  // Caminho da imagem: usamos uma pasta local "images/" como convenção do projeto
-  const caminhoImagem = `images/${empresa.image}`;
+  // Caminho da imagem: usamos a pasta local "imagens/" como convenção do projeto
+  const caminhoImagem = `imagens/${empresa.image}`;
 
   card.innerHTML = `
     <img src="${caminhoImagem}" alt="Logo de ${empresa.name}" loading="lazy"
-         onerror="this.src='images/placeholder.webp'">
+         onerror="this.src='imagens/placeholder.svg'">
     <div class="member-info">
       <span class="membership-badge level-${empresa.membership_level}">
         ${NIVEIS[empresa.membership_level] || "Membro"}

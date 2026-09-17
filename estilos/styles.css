@@ -241,12 +241,12 @@ main {
   text-transform: uppercase;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  color: var(--cor-branco);
+  color: var(--cor-texto);
 }
 
 .membership-badge.level-1 { background-color: var(--cor-prata); }
 .membership-badge.level-2 { background-color: #8c8c8c; }
-.membership-badge.level-3 { background-color: var(--cor-secundaria); color: var(--cor-texto); }
+.membership-badge.level-3 { background-color: var(--cor-secundaria); }
 
 .member-info a.website-link {
   margin-top: 0.4rem;
@@ -268,11 +268,9 @@ main {
 .list-view .member-card.level-2 { border-left-color: #c0c0c0; }
 .list-view .member-card.level-3 { border-left-color: var(--cor-secundaria); }
 
+/* No modo lista as imagens ficam ocultas, mostrando só as informações do membro */
 .list-view .member-card img {
-  width: 110px;
-  height: auto;
-  min-height: 110px;
-  flex-shrink: 0;
+  display: none;
 }
 
 /* =========================================================

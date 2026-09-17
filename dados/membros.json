@@ -1,74 +1,74 @@
 {
   "empresas": [
     {
-      "name": "Café Aroma Curitibano",
-      "address": "Rua XV de Novembro, 450 - Centro, Curitiba - PR",
-      "phone": "(41) 3222-1010",
-      "website": "https://www.cafearomacuritibano.com.br",
-      "image": "cafe-aroma.webp",
+      "name": "Manifesto Café e Torrefação",
+      "address": "Av. Silva Jardim, 837 - Rebouças, Curitiba - PR",
+      "phone": "(41) 98717-5859",
+      "website": "https://www.manifesto.cafe",
+      "image": "manifesto-cafe.webp",
       "membership_level": 3,
-      "additional_info": "Torrefação artesanal de café especial, com cafeteria própria e venda para outras cafeterias da região."
+      "additional_info": "Torrefação artesanal de cafés especiais, com venda direta ao consumidor e para outras cafeterias da região."
     },
     {
-      "name": "Padaria Trigo Dourado",
-      "address": "Av. Sete de Setembro, 1890 - Batel, Curitiba - PR",
-      "phone": "(41) 3225-3344",
-      "website": "https://www.trigodourado.com.br",
-      "image": "padaria-trigo-dourado.webp",
+      "name": "Origem Padaria Artesanal",
+      "address": "Rua Vicente Machado, 456 - Centro, Curitiba - PR",
+      "phone": "(41) 99567-0125",
+      "website": "https://www.origempadaria.com.br",
+      "image": "origem-padaria.webp",
       "membership_level": 2,
-      "additional_info": "Padaria artesanal especializada em pães de fermentação natural e confeitaria fina."
+      "additional_info": "Padaria artesanal especializada em pães de fermentação natural, croissants e confeitaria fina."
     },
     {
-      "name": "TechNova Soluções Digitais",
-      "address": "Rua Comendador Araújo, 522 - Centro, Curitiba - PR",
-      "phone": "(41) 3011-7788",
-      "website": "https://www.technovasolucoes.com.br",
-      "image": "technova.webp",
+      "name": "Mira Sistemas",
+      "address": "Rua Emiliano Perneta, 822 - Centro, Curitiba - PR",
+      "phone": "(41) 3296-1010",
+      "website": "https://www.mirasistemas.com.br",
+      "image": "mira-sistemas.webp",
       "membership_level": 3,
-      "additional_info": "Consultoria em desenvolvimento de software, automação de processos e transformação digital para pequenas e médias empresas."
+      "additional_info": "Consultoria em desenvolvimento de software, suporte de TI e soluções personalizadas para pequenas e médias empresas."
     },
     {
-      "name": "Studio Fit Curitiba",
-      "address": "Rua Mateus Leme, 2100 - São Francisco, Curitiba - PR",
-      "phone": "(41) 3352-9090",
-      "website": "https://www.studiofitcuritiba.com.br",
-      "image": "studio-fit.webp",
+      "name": "Hama Pilates",
+      "address": "Rua General Mário Tourinho, 1805 - Barigui, Curitiba - PR",
+      "phone": "(41) 3532-3003",
+      "website": "https://www.hamapilates.com.br",
+      "image": "hama-pilates.webp",
       "membership_level": 1,
-      "additional_info": "Academia boutique com aulas de funcional, pilates e musculação personalizada."
+      "additional_info": "Estúdio de pilates sistêmico com aulas personalizadas para diferentes níveis e objetivos."
     },
     {
-      "name": "Livraria Página Viva",
-      "address": "Rua Marechal Deodoro, 730 - Centro, Curitiba - PR",
-      "phone": "(41) 3232-6767",
-      "website": "https://www.paginaviva.com.br",
-      "image": "livraria-pagina-viva.webp",
+      "name": "Arte & Letra Livraria",
+      "address": "Alameda Dom Pedro II, 44 - Batel, Curitiba - PR",
+      "phone": "(41) 3039-6895",
+      "website": "https://arteeletra.com.br",
+      "image": "arte-letra.webp",
       "membership_level": 2,
-      "additional_info": "Livraria independente com acervo variado, café literário e eventos culturais mensais."
+      "additional_info": "Livraria, editora e café com curadoria de títulos independentes e programação de lançamentos e encontros literários."
     },
     {
-      "name": "AutoPeças Curitiba Center",
-      "address": "Av. Marechal Floriano Peixoto, 3450 - Boqueirão, Curitiba - PR",
-      "phone": "(41) 3277-4455",
-      "website": "https://www.autopecascuritibacenter.com.br",
-      "image": "autopecas-center.webp",
+      "name": "Auto Peças Marechal",
+      "address": "Av. Marechal Floriano Peixoto, 8707 - Boqueirão, Curitiba - PR",
+      "phone": "(41) 3286-5545",
+      "website": "https://www.autopecasmarechal.com.br",
+      "image": "autopecas-marechal.webp",
       "membership_level": 1,
       "additional_info": "Distribuidora de peças automotivas nacionais e importadas, atendimento para oficinas e consumidor final."
     },
     {
-      "name": "Verde Vida Paisagismo",
-      "address": "Rua Prof. Pedro Viriato Parigot de Souza, 800 - Mossunguê, Curitiba - PR",
-      "phone": "(41) 3025-1122",
-      "website": "https://www.verdevidapaisagismo.com.br",
-      "image": "verde-vida.webp",
+      "name": "Arte Vegetal Paisagismo",
+      "address": "Rua São Salvador, 43, Curitiba - PR",
+      "phone": "(41) 98709-8786",
+      "website": "https://artevegetal.com.br",
+      "image": "arte-vegetal-paisagismo.webp",
       "membership_level": 2,
-      "additional_info": "Projetos de paisagismo residencial e comercial, com foco em jardins sustentáveis e baixa manutenção."
+      "additional_info": "Projetos paisagísticos residenciais e comerciais em atividade desde 1995, com foco em jardins modernos e sustentáveis."
     },
     {
-      "name": "Ouro Contábil Assessoria Empresarial",
-      "address": "Rua Emiliano Perneta, 320 - Centro, Curitiba - PR",
-      "phone": "(41) 3324-8899",
-      "website": "https://www.ourocontabil.com.br",
-      "image": "ouro-contabil.webp",
+      "name": "RCA Assessoria Contábil",
+      "address": "Rua Holanda, 918 - Boa Vista, Curitiba - PR",
+      "phone": "(41) 3257-4144",
+      "website": "https://rcacontabilidade.com.br",
+      "image": "rca-contabilidade.webp",
       "membership_level": 3,
       "additional_info": "Escritório de contabilidade especializado em abertura de empresas, folha de pagamento e consultoria tributária."
     }
