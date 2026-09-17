@@ -5,27 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Meta tags básicas -->
-  <title>Diretório de Membros | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Diretório oficial de empresas associadas à Câmara de Comércio de Curitiba. Consulte contatos, níveis de associação e informações de nossos membros.">
+  <title>Eventos | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Confira os próximos eventos da Câmara de Comércio de Curitiba.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Diretório de Membros | Câmara de Comércio de Curitiba">
-  <meta property="og:description" content="Conheça as empresas associadas à Câmara de Comércio de Curitiba e seus níveis de participação.">
+  <meta property="og:title" content="Eventos | Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Confira os próximos eventos da Câmara de Comércio de Curitiba.">
   <meta property="og:image" content="https://motaigr.github.io/wdd231/images/logo-camara.png">
-  <meta property="og:url" content="https://motaigr.github.io/wdd231/diretorio.html">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/eventos.html">
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
 
-  <!-- Funções compartilhadas (rodapé + menu hambúrguer) e script principal da página -->
+  <!-- Funções compartilhadas (rodapé + menu hambúrguer) -->
   <script src="scripts/comum.js" defer></script>
-  <script src="scripts/diretorio.js" defer></script>
 </head>
 <body>
 
@@ -48,9 +47,9 @@
       <nav id="primary-nav" class="primary-nav">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="diretorio.html" class="active" aria-current="page">Diretório</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
           <li><a href="associese.html">Associe-se</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="eventos.html" class="active" aria-current="page">Eventos</a></li>
         </ul>
       </nav>
     </div>
@@ -59,35 +58,8 @@
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
     <section class="directory-intro">
-      <h1>Diretório de Membros</h1>
-      <p>Conheça as empresas associadas à nossa Câmara de Comércio e descubra tudo o que a comunidade empresarial de Curitiba tem a oferecer.</p>
-
-      <!-- Controles de alternância entre Grid e Lista -->
-      <div class="view-controls" role="group" aria-label="Alternar modo de exibição">
-        <button id="grid-btn" class="view-btn active" aria-pressed="true" title="Exibir em grade">
-          <!-- Ícone simples de grade feito em SVG, sem dependências externas -->
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-          </svg>
-          Grade
-        </button>
-        <button id="list-btn" class="view-btn" aria-pressed="false" title="Exibir em lista">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="3"></rect>
-            <rect x="3" y="10.5" width="18" height="3"></rect>
-            <rect x="3" y="17" width="18" height="3"></rect>
-          </svg>
-          Lista
-        </button>
-      </div>
-    </section>
-
-    <!-- Área onde os membros serão renderizados via JavaScript -->
-    <section id="members-container" class="members-container grid-view" aria-live="polite">
-      <p class="loading-message">Carregando membros...</p>
+      <h1>Eventos</h1>
+      <p>Página em construção. Em breve você poderá conferir aqui a agenda de eventos da Câmara de Comércio de Curitiba.</p>
     </section>
   </main>
 

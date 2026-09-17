@@ -4,8 +4,8 @@
    1) Buscar os dados dos membros em dados/membros.json
    2) Renderizar os cartões na área #members-container
    3) Alternar entre visualização em Grade e em Lista
-   4) Preencher o rodapé com ano atual e data de última modificação
-   5) Controlar o menu hambúrguer (responsividade)
+   (rodapé e menu hambúrguer ficam em comum.js, compartilhado
+   com as demais páginas da Câmara de Comércio)
    ========================================================= */
 
 // Mapeia o nível numérico do JSON para um rótulo legível em português
@@ -45,12 +45,12 @@ function criarCartaoMembro(empresa) {
   const card = document.createElement("article");
   card.className = `member-card level-${empresa.membership_level}`;
 
-  // Caminho da imagem: usamos a pasta local "imagens/" como convenção do projeto
-  const caminhoImagem = `imagens/${empresa.image}`;
+  // Caminho da imagem: usamos a pasta local "images/" como convenção do projeto
+  const caminhoImagem = `images/${empresa.image}`;
 
   card.innerHTML = `
     <img src="${caminhoImagem}" alt="Logo de ${empresa.name}" loading="lazy"
-         onerror="this.src='imagens/placeholder.svg'">
+         onerror="this.src='images/placeholder.svg'">
     <div class="member-info">
       <span class="membership-badge level-${empresa.membership_level}">
         ${NIVEIS[empresa.membership_level] || "Membro"}
@@ -120,35 +120,11 @@ function configurarAlternanciaDeVisualizacao() {
 }
 
 /**
- * Preenche o rodapé com o ano atual e a data da última modificação
- * do documento (informação nativa do navegador via document.lastModified).
- */
-function configurarRodape() {
-  const anoAtual = new Date().getFullYear();
-  document.getElementById("current-year").textContent = anoAtual;
-  document.getElementById("last-modified").textContent = document.lastModified;
-}
-
-/**
- * Controla a abertura/fechamento do menu hambúrguer em telas pequenas.
- */
-function configurarMenuHamburguer() {
-  const botaoMenu = document.getElementById("menu-toggle");
-  const nav = document.getElementById("primary-nav");
-
-  botaoMenu.addEventListener("click", () => {
-    const estaAberto = nav.classList.toggle("open");
-    botaoMenu.setAttribute("aria-expanded", estaAberto ? "true" : "false");
-  });
-}
-
-/**
  * Ponto de entrada: espera o DOM carregar, busca os dados e inicializa
- * todas as funcionalidades da página.
+ * as funcionalidades específicas desta página (rodapé e menu hambúrguer
+ * já são cuidados por comum.js).
  */
 async function iniciar() {
-  configurarRodape();
-  configurarMenuHamburguer();
   configurarAlternanciaDeVisualizacao();
 
   const membros = await buscarMembros();
