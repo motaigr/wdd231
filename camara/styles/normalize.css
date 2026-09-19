@@ -1,0 +1,65 @@
+/* =========================================================
+   NORMALIZE / RESET
+   Objetivo: zerar margens/paddings padrão dos navegadores e
+   garantir um comportamento consistente entre eles antes de
+   aplicar o CSS autoral em styles.css.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* padding e border não somam à largura definida */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Evita rolagem horizontal acidental em qualquer elemento que ultrapasse a viewport */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%; /* imagens nunca ultrapassam o container, evitando rolagem horizontal */
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
