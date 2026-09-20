@@ -299,9 +299,10 @@ main {
   justify-content: center;
   gap: 0.75rem;
   padding: 1.5rem;
-  /* background-color sólido explícito: ferramentas de contraste automatizadas
-     nem sempre avaliam corretamente um gradiente sozinho em background-image */
-  background-color: var(--cor-primaria);
+  /* background-color sólido explícito (valor literal, não var()): ferramentas
+     automatizadas de contraste nem sempre resolvem variáveis CSS corretamente
+     nem avaliam um gradiente sozinho em background-image */
+  background-color: #0b3d2e;
   background-image: linear-gradient(to top, rgba(11, 61, 46, 0.9), rgba(11, 61, 46, 0.25));
   color: var(--cor-branco);
 }
