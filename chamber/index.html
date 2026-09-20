@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Câmara de Comércio de Curitiba | Início</title>
+  <meta name="description" content="Câmara de Comércio de Curitiba: conecte sua empresa a uma rede de negócios, acompanhe eventos, o tempo local e conheça membros em destaque.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Câmara de Comércio de Curitiba | Início">
+  <meta property="og:description" content="Conecte sua empresa a uma rede de negócios, acompanhe eventos, o tempo local e conheça membros em destaque.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/camara/imagens/logo-camara.png">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/styles.css">
+
+  <!-- Funções compartilhadas (rodapé + menu hambúrguer + cartão de membro) e script desta página -->
+  <script src="scripts/comum.js" defer></script>
+  <script src="scripts/index.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
+        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+      </div>
+
+      <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- ===================== NAVEGAÇÃO ===================== -->
+      <nav id="primary-nav" class="primary-nav">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Início</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
+          <li><a href="associese.html">Associe-se</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <img src="imagens/hero-camara.svg" alt="Ilustração do horizonte de Curitiba, com o Jardim Botânico e araucárias ao entardecer" class="hero-image" width="1600" height="600">
+      <div class="hero-content">
+        <h1>Bem-vindo à Câmara de Comércio de Curitiba</h1>
+        <p>Conectamos empresas, fortalecemos o comércio local e impulsionamos o crescimento econômico da nossa região.</p>
+        <a href="associese.html" class="cta-button">Associe-se agora</a>
+      </div>
+    </section>
+
+    <!-- ===================== GRID: EVENTOS / TEMPO / DESTAQUES ===================== -->
+    <div class="home-grid">
+
+      <!-- Eventos atuais -->
+      <section class="home-card events-section" aria-labelledby="events-heading">
+        <h2 id="events-heading">Próximos Eventos</h2>
+        <ul class="event-list">
+          <li class="event-card">
+            <p class="event-date">08 OUT</p>
+            <div>
+              <h3>Café da Manhã de Networking</h3>
+              <p>08h30 · Sede da Câmara, Centro</p>
+            </div>
+          </li>
+          <li class="event-card">
+            <p class="event-date">17 OUT</p>
+            <div>
+              <h3>Workshop de Marketing Digital</h3>
+              <p>19h · Auditório da Câmara</p>
+            </div>
+          </li>
+          <li class="event-card">
+            <p class="event-date">05 NOV</p>
+            <div>
+              <h3>Feira de Negócios Curitiba 2026</h3>
+              <p>09h às 18h · Centro de Eventos</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Tempo em Curitiba (preenchido via JavaScript/OpenWeatherMap) -->
+      <section class="home-card weather-section" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Tempo em Curitiba</h2>
+        <div id="weather-current" class="weather-current">
+          <p class="loading-message">Carregando o tempo atual...</p>
+        </div>
+        <ul id="weather-forecast" class="weather-forecast"></ul>
+      </section>
+
+      <!-- Membros em destaque (preenchido via JavaScript/membros.json) -->
+      <section class="home-card featured-section" aria-labelledby="featured-heading">
+        <h2 id="featured-heading">Membros em Destaque</h2>
+        <div id="featured-container" class="featured-members">
+          <p class="loading-message">Carregando membros em destaque...</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
+      <div class="footer-col footer-contact">
+        <h2>Contato</h2>
+        <p>Câmara de Comércio de Curitiba</p>
+        <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
+        <p>Telefone: (41) 3200-0000</p>
+        <p>E-mail: <a href="mailto:contato@camaracuritiba.com.br">contato@camaracuritiba.com.br</a></p>
+      </div>
+
+      <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
+      <div class="footer-col footer-dev">
+        <h2>Desenvolvimento</h2>
+        <p>Desenvolvido por Igor Mota</p>
+        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="last-modified"></span></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

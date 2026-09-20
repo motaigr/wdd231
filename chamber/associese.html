@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Associe-se | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Saiba como associar sua empresa à Câmara de Comércio de Curitiba.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Associe-se | Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Saiba como associar sua empresa à Câmara de Comércio de Curitiba.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/camara/imagens/logo-camara.png">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/associese.html">
+  <meta property="og:type" content="website">
+
+  <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/styles.css">
+
+  <!-- Funções compartilhadas (rodapé + menu hambúrguer) -->
+  <script src="scripts/comum.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
+        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+      </div>
+
+      <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- ===================== NAVEGAÇÃO ===================== -->
+      <nav id="primary-nav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
+          <li><a href="associese.html" class="active" aria-current="page">Associe-se</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main>
+    <section class="directory-intro">
+      <h1>Associe-se</h1>
+      <p>Página em construção. Em breve você poderá conhecer aqui os benefícios e o passo a passo para associar sua empresa à Câmara de Comércio de Curitiba.</p>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
+      <div class="footer-col footer-contact">
+        <h2>Contato</h2>
+        <p>Câmara de Comércio de Curitiba</p>
+        <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
+        <p>Telefone: (41) 3200-0000</p>
+        <p>E-mail: <a href="mailto:contato@camaracuritiba.com.br">contato@camaracuritiba.com.br</a></p>
+      </div>
+
+      <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
+      <div class="footer-col footer-dev">
+        <h2>Desenvolvimento</h2>
+        <p>Desenvolvido por Igor Mota</p>
+        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="last-modified"></span></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
