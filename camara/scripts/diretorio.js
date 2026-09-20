@@ -8,13 +8,6 @@
    com as demais páginas da Câmara de Comércio)
    ========================================================= */
 
-// Mapeia o nível numérico do JSON para um rótulo legível em português
-const NIVEIS = {
-  1: "Membro",
-  2: "Prata",
-  3: "Ouro",
-};
-
 /**
  * Busca os dados dos membros no arquivo JSON.
  * Usamos async/await + try/catch para tratar falhas de rede
@@ -37,39 +30,8 @@ async function buscarMembros() {
 }
 
 /**
- * Constrói o HTML de um único cartão de membro a partir do objeto da empresa.
- * Mantemos a lógica de montagem separada da lógica de "onde inserir no DOM"
- * para facilitar testes e reaproveitamento entre os modos grid/lista.
- */
-function criarCartaoMembro(empresa) {
-  const card = document.createElement("article");
-  card.className = `member-card level-${empresa.membership_level}`;
-
-  // Caminho da imagem: usamos a pasta local "imagens/" como convenção do projeto
-  const caminhoImagem = `imagens/${empresa.image}`;
-
-  card.innerHTML = `
-    <img src="${caminhoImagem}" alt="Logo de ${empresa.name}" loading="lazy"
-         onerror="this.src='imagens/placeholder.svg'">
-    <div class="member-info">
-      <span class="membership-badge level-${empresa.membership_level}">
-        ${NIVEIS[empresa.membership_level] || "Membro"}
-      </span>
-      <h2>${empresa.name}</h2>
-      <p>${empresa.address}</p>
-      <p>${empresa.phone}</p>
-      <p>${empresa.additional_info}</p>
-      <a class="website-link" href="${empresa.website}" target="_blank" rel="noopener noreferrer">
-        Visitar site
-      </a>
-    </div>
-  `;
-
-  return card;
-}
-
-/**
  * Renderiza a lista completa de membros dentro do container principal.
+ * (criarCartaoMembro vem de comum.js, compartilhado com a página inicial)
  */
 function renderizarMembros(listaEmpresas) {
   const container = document.getElementById("members-container");
