@@ -29,7 +29,8 @@ body {
    CABEÇALHO
    Mobile-first: por padrão o menu fica oculto e vira um
    dropdown ativado pelo botão hambúrguer. A partir de 768px
-   o menu horizontal aparece e o botão é escondido.
+   (em telas-grandes.css) o menu horizontal aparece e o botão
+   é escondido.
    ========================================================= */
 .site-header {
   background-color: var(--cor-primaria);
@@ -442,92 +443,4 @@ main {
 
 .footer-container p {
   margin: 0.15rem 0;
-}
-
-/* =========================================================
-   MEDIA QUERIES - abordagem MOBILE-FIRST
-   As regras acima já cobrem 320px+. A partir daqui, ampliamos
-   o layout para telas médias e grandes.
-   ========================================================= */
-
-/* Tablets (~600px) */
-@media (min-width: 600px) {
-  .members-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .featured-members {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktops pequenos / tablets grandes (~768px) */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none; /* menu horizontal substitui o hambúrguer */
-  }
-
-  .primary-nav {
-    display: block;
-    width: auto;
-    order: 2;
-  }
-
-  .primary-nav ul {
-    flex-direction: row;
-    padding-top: 0;
-    gap: 0.5rem;
-  }
-
-  .primary-nav a {
-    border-top: none;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .directory-intro h1 {
-    font-size: 2rem;
-  }
-
-  .hero-image {
-    height: 380px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.05rem;
-  }
-
-  .home-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .featured-section {
-    grid-column: 1 / -1;
-  }
-
-  .featured-members {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Desktops (~1000px) */
-@media (min-width: 1000px) {
-  .members-container.grid-view {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .home-grid {
-    grid-template-columns: 1fr 1fr 1.2fr;
-  }
-
-  .featured-section {
-    grid-column: auto;
-  }
-
-  .featured-members {
-    grid-template-columns: 1fr;
-  }
 }

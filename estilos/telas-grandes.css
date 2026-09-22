@@ -12,4 +12,15 @@
     display: flex;
     gap: 1rem;
   }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .grid-cursos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
