@@ -471,9 +471,16 @@ main {
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--cor-texto);
+  background-color: var(--cor-branco);
   padding: 0.55rem 0.7rem;
-  border: 1px solid #c7cdd1;
+  border: 1.5px solid var(--cor-primaria);
   border-radius: var(--raio);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--cor-secundaria);
+  outline-offset: 1px;
 }
 
 .form-group textarea {
@@ -482,7 +489,7 @@ main {
 }
 
 .membership-choice {
-  border: 1px solid #c7cdd1;
+  border: 1.5px solid var(--cor-primaria);
   border-radius: var(--raio);
   padding: 0.75rem;
 }
