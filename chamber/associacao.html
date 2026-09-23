@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Associe-se | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Associe sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Associe-se | Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/camara/imagens/logo-camara.png">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/associacao.html">
+  <meta property="og:type" content="website">
+
+  <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <!-- Funções compartilhadas (rodapé + menu hambúrguer) e script desta página -->
+  <script src="scripts/comum.js" defer></script>
+  <script src="scripts/associacao.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
+        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+      </div>
+
+      <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- ===================== NAVEGAÇÃO ===================== -->
+      <nav id="primary-nav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
+          <li><a href="associacao.html" class="active" aria-current="page">Associe-se</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main>
+    <section class="directory-intro">
+      <h1>Associe-se</h1>
+      <p>Preencha o formulário abaixo para associar sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação ao lado.</p>
+    </section>
+
+    <!-- Layout de duas colunas: formulário + cartões de nível (mobile-first: cartões abaixo do formulário) -->
+    <div class="join-layout">
+
+      <!-- ===================== FORMULÁRIO DE ASSOCIAÇÃO ===================== -->
+      <section class="home-card join-form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading">Formulário de Associação</h2>
+
+        <form class="join-form" action="agradecimento.html" method="get">
+
+          <div class="form-group">
+            <label for="fname">Nome
+              <input type="text" id="fname" name="fname" required
+                     title="Informe seu nome" autocomplete="given-name">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="lname">Sobrenome
+              <input type="text" id="lname" name="lname" required
+                     title="Informe seu sobrenome" autocomplete="family-name">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="organization-title">Cargo
+              <input type="text" id="organization-title" name="organization-title"
+                     title="Apenas letras, espaços e hífens, com no mínimo 7 caracteres"
+                     autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail
+              <input type="email" id="email" name="email" required
+                     title="Informe um e-mail válido" autocomplete="email"
+                     placeholder="ana@suaempresa.com.br">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefone
+              <input type="tel" id="phone" name="phone" required
+                     title="Informe um telefone para contato" autocomplete="tel">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Nome da Empresa/Organização
+              <input type="text" id="organization" name="organization" required
+                     title="Informe o nome da sua empresa ou organização" autocomplete="organization">
+            </label>
+          </div>
+
+          <fieldset class="membership-choice">
+            <legend>Nível de Associação</legend>
+            <div class="radio-options">
+              <label><input type="radio" name="membership-level" value="np" required> Sem fins lucrativos (NP)</label>
+              <label><input type="radio" name="membership-level" value="bronze"> Bronze</label>
+              <label><input type="radio" name="membership-level" value="silver"> Prata</label>
+              <label><input type="radio" name="membership-level" value="gold"> Ouro</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="description">Descrição da Organização
+              <textarea id="description" name="description" title="Descreva brevemente sua empresa ou organização" rows="4"></textarea>
+            </label>
+          </div>
+
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <button type="submit">Enviar solicitação</button>
+        </form>
+      </section>
+
+      <!-- ===================== NÍVEIS DE ASSOCIAÇÃO ===================== -->
+      <section class="membership-cards-section" aria-labelledby="cards-heading">
+        <h2 id="cards-heading">Níveis de Associação</h2>
+
+        <div class="membership-cards">
+          <article class="membership-card level-np">
+            <h3>Sem fins lucrativos (NP)</h3>
+            <p>Ideal para organizações sem fins lucrativos da nossa comunidade.</p>
+            <button type="button" class="info-btn" data-modal-target="modal-np">Mais informações</button>
+          </article>
+
+          <article class="membership-card level-bronze">
+            <h3>Bronze</h3>
+            <p>Ponto de partida para pequenas empresas que estão começando a crescer.</p>
+            <button type="button" class="info-btn" data-modal-target="modal-bronze">Mais informações</button>
+          </article>
+
+          <article class="membership-card level-silver">
+            <h3>Prata</h3>
+            <p>Mais visibilidade e benefícios para empresas em expansão.</p>
+            <button type="button" class="info-btn" data-modal-target="modal-silver">Mais informações</button>
+          </article>
+
+          <article class="membership-card level-gold">
+            <h3>Ouro</h3>
+            <p>Máximo destaque e benefícios para grandes parceiros da Câmara.</p>
+            <button type="button" class="info-btn" data-modal-target="modal-gold">Mais informações</button>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===================== MODAIS COM DETALHES DE CADA NÍVEL ===================== -->
+    <dialog id="modal-np" class="info-modal">
+      <h3>Sem fins lucrativos (NP)</h3>
+      <p>Taxa anual: gratuita para organizações sem fins lucrativos registradas.</p>
+      <ul>
+        <li>Listagem no Diretório de Membros</li>
+        <li>Divulgação de eventos da organização</li>
+        <li>Acesso a workshops e capacitações</li>
+      </ul>
+      <button type="button" class="modal-close-btn">Fechar</button>
+    </dialog>
+
+    <dialog id="modal-bronze" class="info-modal">
+      <h3>Bronze</h3>
+      <p>Taxa anual: R$ 300,00.</p>
+      <ul>
+        <li>Listagem no Diretório de Membros</li>
+        <li>Uso do selo de membro no site da empresa</li>
+        <li>Descontos em eventos da Câmara</li>
+      </ul>
+      <button type="button" class="modal-close-btn">Fechar</button>
+    </dialog>
+
+    <dialog id="modal-silver" class="info-modal">
+      <h3>Prata</h3>
+      <p>Taxa anual: R$ 600,00.</p>
+      <ul>
+        <li>Todos os benefícios do nível Bronze</li>
+        <li>Chance de aparecer nos membros em destaque da página inicial</li>
+        <li>Divulgação em nossas redes sociais</li>
+      </ul>
+      <button type="button" class="modal-close-btn">Fechar</button>
+    </dialog>
+
+    <dialog id="modal-gold" class="info-modal">
+      <h3>Ouro</h3>
+      <p>Taxa anual: R$ 1.200,00.</p>
+      <ul>
+        <li>Todos os benefícios do nível Prata</li>
+        <li>Prioridade nos membros em destaque da página inicial</li>
+        <li>Participação como patrocinador em eventos da Câmara</li>
+      </ul>
+      <button type="button" class="modal-close-btn">Fechar</button>
+    </dialog>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
+      <div class="footer-col footer-contact">
+        <h2>Contato</h2>
+        <p>Câmara de Comércio de Curitiba</p>
+        <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
+        <p>Telefone: (41) 3200-0000</p>
+        <p>E-mail: <a href="mailto:contato@camaracuritiba.com.br">contato@camaracuritiba.com.br</a></p>
+      </div>
+
+      <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
+      <div class="footer-col footer-dev">
+        <h2>Desenvolvimento</h2>
+        <p>Desenvolvido por Igor Mota</p>
+        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="last-modified"></span></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Meta tags básicas -->
-  <title>Associe-se | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Saiba como associar sua empresa à Câmara de Comércio de Curitiba.">
+  <title>Obrigado | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Confirmação de envio do formulário de associação à Câmara de Comércio de Curitiba.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
@@ -18,10 +18,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Associe-se | Câmara de Comércio de Curitiba">
-  <meta property="og:description" content="Saiba como associar sua empresa à Câmara de Comércio de Curitiba.">
+  <meta property="og:title" content="Obrigado | Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Confirmação de envio do formulário de associação à Câmara de Comércio de Curitiba.">
   <meta property="og:image" content="https://motaigr.github.io/wdd231/camara/imagens/logo-camara.png">
-  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/associese.html">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/agradecimento.html">
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
@@ -29,8 +29,9 @@
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
 
-  <!-- Funções compartilhadas (rodapé + menu hambúrguer) -->
+  <!-- Funções compartilhadas (rodapé + menu hambúrguer) e script desta página -->
   <script src="scripts/comum.js" defer></script>
+  <script src="scripts/agradecimento.js" defer></script>
 </head>
 <body>
 
@@ -54,7 +55,7 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="diretorio.html">Diretório</a></li>
-          <li><a href="associese.html" class="active" aria-current="page">Associe-se</a></li>
+          <li><a href="associacao.html">Associe-se</a></li>
           <li><a href="eventos.html">Eventos</a></li>
         </ul>
       </nav>
@@ -64,9 +65,27 @@
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
     <section class="directory-intro">
-      <h1>Associe-se</h1>
-      <p>Página em construção. Em breve você poderá conhecer aqui os benefícios e o passo a passo para associar sua empresa à Câmara de Comércio de Curitiba.</p>
+      <h1>Obrigado pela sua solicitação!</h1>
+      <p>Recebemos os dados abaixo e nossa equipe entrará em contato em breve para concluir sua associação à Câmara de Comércio de Curitiba.</p>
     </section>
+
+    <!-- Resumo preenchido via JavaScript a partir dos parâmetros da URL -->
+    <dl class="thanks-summary" id="thanks-summary">
+      <dt>Nome</dt>
+      <dd id="resumo-nome"></dd>
+
+      <dt>E-mail</dt>
+      <dd id="resumo-email"></dd>
+
+      <dt>Celular</dt>
+      <dd id="resumo-telefone"></dd>
+
+      <dt>Empresa/Organização</dt>
+      <dd id="resumo-empresa"></dd>
+
+      <dt>Data/Hora do envio</dt>
+      <dd id="resumo-timestamp"></dd>
+    </dl>
   </main>
 
   <!-- ===================== RODAPÉ ===================== -->
