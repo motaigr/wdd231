@@ -5,6 +5,7 @@
 
   #menu-nav {
     display: block !important; /* Força a exibição contínua */
+    position: static; /* Remove o overlay absoluto herdado do mobile */
     width: auto;
   }
 
