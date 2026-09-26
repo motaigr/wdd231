@@ -63,14 +63,44 @@ const courses = [
 
 const containerCursos = document.getElementById('container-cursos');
 const totalCreditosEl = document.getElementById('total-creditos');
+const modalInfosCurso = document.getElementById('infos-do-curso');
+
+function exibirInfosDoCurso(curso) {
+  modalInfosCurso.innerHTML = '';
+
+  const botaoFechar = document.createElement('button');
+  botaoFechar.className = 'botao-fechar';
+  botaoFechar.setAttribute('aria-label', 'Fechar');
+  botaoFechar.textContent = '❌';
+  botaoFechar.addEventListener('click', () => modalInfosCurso.close());
+
+  const titulo = document.createElement('h3');
+  titulo.textContent = `${curso.subject} ${curso.number}: ${curso.title}`;
+
+  const creditos = document.createElement('p');
+  creditos.textContent = `Créditos: ${curso.credits}`;
+
+  const descricao = document.createElement('p');
+  descricao.textContent = curso.description;
+
+  const certificado = document.createElement('p');
+  certificado.textContent = `Certificado: ${curso.certificate}`;
+
+  const tecnologias = document.createElement('p');
+  tecnologias.textContent = `Tecnologias: ${curso.technology.join(', ')}`;
+
+  modalInfosCurso.append(botaoFechar, titulo, creditos, descricao, certificado, tecnologias);
+  modalInfosCurso.showModal();
+}
 
 function renderizarCursos(listaCursos) {
   containerCursos.innerHTML = '';
-  
+
   listaCursos.forEach(curso => {
     const card = document.createElement('div');
     card.className = `curso-card ${curso.completed ? 'concluido' : ''}`;
     card.textContent = `${curso.subject} ${curso.number}`;
+    card.addEventListener('click', () => exibirInfosDoCurso(curso));
     containerCursos.appendChild(card);
   });
 
