@@ -1,7 +1,7 @@
 /* =========================================================
    agradecimento.js
    Extrai os parâmetros enviados via GET pelo formulário de
-   associação (associacao.html) e exibe os dados na tela.
+   associação (participar.html) e exibe os dados na tela.
    (rodapé e menu hambúrguer ficam em comum.js, compartilhado
    com as demais páginas da Câmara de Comércio)
    ========================================================= */

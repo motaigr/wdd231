@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento do Site - Guia do Rugby Brasileiro</title>
+  <meta name="description" content="Planejamento (Site Plan) do projeto final individual de WDD 231: Guia do Rugby Brasileiro.">
+  <meta name="author" content="Igor Mota">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/siteplan.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <p class="rotulo">WDD 231 · Projeto Final Individual</p>
+    <h1>Planejamento do Site</h1>
+    <p class="subtitulo">Guia do Rugby Brasileiro</p>
+    <nav aria-label="Seções do planejamento">
+      <ul>
+        <li><a href="#nome">Nome</a></li>
+        <li><a href="#finalidade">Finalidade</a></li>
+        <li><a href="#publico">Público-alvo</a></li>
+        <li><a href="#cores">Cores</a></li>
+        <li><a href="#tipografia">Tipografia</a></li>
+        <li><a href="#wireframe">Wireframe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- 1. Nome do site -->
+    <section id="nome" aria-labelledby="titulo-nome">
+      <h2 id="titulo-nome">1. Nome do Site</h2>
+      <dl class="destaque">
+        <dt>Nome</dt>
+        <dd>Guia do Rugby Brasileiro</dd>
+        <dt>Domínio proposto</dt>
+        <dd><code>guiadorugby.com.br</code></dd>
+      </dl>
+      <p>
+        O nome diz exatamente o que o site é: um <strong>guia</strong> que reúne, em um só lugar,
+        informações sobre o <strong>rugby praticado no Brasil</strong>. A palavra "guia" transmite a ideia
+        de orientação para quem ainda não conhece o esporte, e "brasileiro" deixa claro o recorte
+        nacional (clubes, seleções e campeonatos do país). O domínio é curto, fácil de lembrar e de
+        digitar, e o sufixo <code>.com.br</code> reforça o público brasileiro.
+      </p>
+    </section>
+
+    <!-- 2. Finalidade -->
+    <section id="finalidade" aria-labelledby="titulo-finalidade">
+      <h2 id="titulo-finalidade">2. Finalidade do Site</h2>
+      <p>
+        Divulgar o rugby no Brasil e aproximar novos praticantes, mostrando que existem clubes em
+        várias regiões do país. O site é informativo e terá três páginas:
+      </p>
+      <ol class="paginas">
+        <li>
+          <h3>Início</h3>
+          <p>Panorama do esporte no país: um pouco de história, as seleções brasileiras (Tupis e Yaras),
+          as modalidades praticadas (XV e Sevens) e os principais campeonatos nacionais e regionais.</p>
+        </li>
+        <li>
+          <h3>Clubes</h3>
+          <p>Lista dinâmica com mais de 15 clubes carregados de um arquivo JSON (nome, cidade, estado,
+          região e ano de fundação). O usuário poderá filtrar por região, abrir um modal com detalhes
+          de cada clube e salvar favoritos no navegador (<code>localStorage</code>).</p>
+        </li>
+        <li>
+          <h3>Comece a Jogar</h3>
+          <p>Explica como começar a praticar o esporte e traz um formulário para quem quer encontrar um
+          clube. Os dados enviados são exibidos em uma página de confirmação.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. Público-alvo -->
+    <section id="publico" aria-labelledby="titulo-publico">
+      <h2 id="titulo-publico">3. Cenários do Público-Alvo</h2>
+      <div class="cartoes">
+        <article class="cartao">
+          <h3>"Existe algum time de rugby perto de mim?"</h3>
+          <p><strong>Quem:</strong> Lucas, 22 anos, universitário em Goiânia, assistiu a um jogo de Sevens
+          nas Olimpíadas e ficou curioso.</p>
+          <p><strong>O que espera encontrar:</strong> uma lista de clubes que possa filtrar pela região
+          Centro-Oeste, com cidade e ano de fundação, e um jeito de salvar os clubes que mais lhe interessam.</p>
+        </article>
+        <article class="cartao">
+          <h3>"Nunca joguei. Como faço para começar?"</h3>
+          <p><strong>Quem:</strong> Mariana, 30 anos, pratica corrida e procura um esporte coletivo.</p>
+          <p><strong>O que espera encontrar:</strong> uma explicação simples sobre as modalidades, o que
+          é preciso para o primeiro treino e um formulário para pedir indicação de clube.</p>
+        </article>
+        <article class="cartao">
+          <h3>"Quais são os principais campeonatos do Brasil?"</h3>
+          <p><strong>Quem:</strong> Roberto, 45 anos, pai de um jogador juvenil que quer acompanhar o esporte.</p>
+          <p><strong>O que espera encontrar:</strong> um resumo dos campeonatos nacionais e regionais e
+          informações sobre as seleções brasileiras masculina e feminina.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Esquema de cores -->
+    <section id="cores" aria-labelledby="titulo-cores">
+      <h2 id="titulo-cores">4. Esquema de Cores</h2>
+      <p>A paleta combina o azul-noite, sóbrio como os uniformes tradicionais de rugby, com a terracota do campo de terra batida do interior do Brasil. Evita o verde e amarelo sem perder a identidade brasileira, e mantém contraste adequado para leitura.</p>
+      <ul class="paleta">
+        <li>
+          <span class="amostra cor-principal" aria-hidden="true"></span>
+          <h3>Azul-noite</h3>
+          <p class="codigo"><code>#1D3557</code> · <code>rgb(29, 53, 87)</code></p>
+          <p>Cor primária: cabeçalho, rodapé, menu de navegação e títulos de seção.</p>
+        </li>
+        <li>
+          <span class="amostra cor-destaque" aria-hidden="true"></span>
+          <h3>Terracota</h3>
+          <p class="codigo"><code>#A63D2F</code> · <code>rgb(166, 61, 47)</code></p>
+          <p>Cor de destaque: botões de ação (com texto branco), link ativo, ícone de favorito e bordas de realce.</p>
+        </li>
+        <li>
+          <span class="amostra cor-secundaria" aria-hidden="true"></span>
+          <h3>Azul-claro</h3>
+          <p class="codigo"><code>#A8DADC</code> · <code>rgb(168, 218, 220)</code></p>
+          <p>Cor secundária: selos de região, fundo do modal de clubes, hover do menu e links sobre fundo azul-noite.</p>
+        </li>
+        <li>
+          <span class="amostra cor-fundo" aria-hidden="true"></span>
+          <h3>Bege</h3>
+          <p class="codigo"><code>#FBF8F3</code> · <code>rgb(251, 248, 243)</code></p>
+          <p>Cor de fundo: fundo geral das páginas e dos cartões de clubes.</p>
+        </li>
+        <li>
+          <span class="amostra cor-texto" aria-hidden="true"></span>
+          <h3>Grafite</h3>
+          <p class="codigo"><code>#1F2421</code> · <code>rgb(31, 36, 33)</code></p>
+          <p>Cor do texto: corpo de texto e rótulos do formulário.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5. Tipografia -->
+    <section id="tipografia" aria-labelledby="titulo-tipografia">
+      <h2 id="titulo-tipografia">5. Tipografia</h2>
+      <p>Duas fontes do Google Fonts, com <code>sans-serif</code> como alternativa.</p>
+      <div class="fontes">
+        <article class="fonte">
+          <h3>Oswald</h3>
+          <p class="exemplo exemplo-titulo">Tupis e Yaras em campo</p>
+          <p><strong>Uso:</strong> títulos (<code>h1</code>–<code>h3</code>), nome do site no cabeçalho,
+          itens do menu e botões. É condensada e forte, lembrando placares e camisas esportivas.</p>
+          <p><strong>Pesos:</strong> 500 e 700.</p>
+        </article>
+        <article class="fonte">
+          <h3>Source Sans 3</h3>
+          <p class="exemplo exemplo-corpo">O rugby chegou ao Brasil no fim do século XIX e hoje tem clubes em todas as regiões do país.</p>
+          <p><strong>Uso:</strong> corpo de texto, descrições dos clubes, formulário e rodapé.
+          É muito legível em telas pequenas e em textos longos.</p>
+          <p><strong>Pesos:</strong> 400 e 600.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Wireframe -->
+    <section id="wireframe" aria-labelledby="titulo-wireframe">
+      <h2 id="titulo-wireframe">6. Wireframe da Página Inicial</h2>
+      <p>
+        O layout é pensado primeiro para celular (<em>mobile first</em>). A partir de 768&nbsp;px, o menu
+        fica visível e os blocos de conteúdo passam a ser exibidos em grade.
+      </p>
+
+      <div class="wireframes">
+        <figure class="wf-figura">
+          <div class="wf wf-mobile" role="img" aria-label="Wireframe para celular: cabeçalho com logo e botão de menu, imagem principal com chamada, seções empilhadas em uma coluna e rodapé.">
+            <div class="wf-bloco wf-header"><span>Logo</span><span>☰</span></div>
+            <div class="wf-bloco wf-hero">Imagem principal + título + botão "Encontre um clube"</div>
+            <div class="wf-bloco">História do rugby no Brasil</div>
+            <div class="wf-bloco">Seleções (Tupis / Yaras)</div>
+            <div class="wf-bloco">Modalidades (XV / Sevens)</div>
+            <div class="wf-bloco">Campeonatos</div>
+            <div class="wf-bloco wf-footer">Rodapé</div>
+          </div>
+          <figcaption>Telas pequenas (até 767&nbsp;px)</figcaption>
+        </figure>
+
+        <figure class="wf-figura">
+          <div class="wf wf-desktop" role="img" aria-label="Wireframe para telas grandes: cabeçalho com logo e menu horizontal, imagem principal larga, história e seleções lado a lado, modalidades e campeonatos lado a lado e rodapé em três colunas.">
+            <div class="wf-bloco wf-header"><span>Logo</span><span>Início · Clubes · Comece a Jogar</span></div>
+            <div class="wf-bloco wf-hero">Imagem principal larga + título + botão "Encontre um clube"</div>
+            <div class="wf-grade">
+              <div class="wf-bloco">História</div>
+              <div class="wf-bloco">Seleções</div>
+              <div class="wf-bloco">Modalidades</div>
+              <div class="wf-bloco">Campeonatos</div>
+            </div>
+            <div class="wf-bloco wf-footer wf-rodape3"><span>Contato</span><span>Redes sociais</span><span>Créditos</span></div>
+          </div>
+          <figcaption>Telas médias e grandes (768&nbsp;px ou mais)</figcaption>
+        </figure>
+      </div>
+
+      <h3>Descrição do layout</h3>
+      <div class="colunas">
+        <div>
+          <h4>Telas pequenas</h4>
+          <ul>
+            <li>Cabeçalho com logo à esquerda e botão hambúrguer à direita que abre o menu.</li>
+            <li>Imagem principal com título e botão de chamada para a página "Comece a Jogar".</li>
+            <li>Seções do panorama empilhadas em uma única coluna.</li>
+            <li>Rodapé com contato, redes sociais e data da última modificação.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Telas grandes</h4>
+          <ul>
+            <li>Menu horizontal sempre visível; botão hambúrguer oculto.</li>
+            <li>Imagem principal ocupa toda a largura, com texto sobreposto.</li>
+            <li>Seções do panorama em grade de duas colunas (CSS Grid), largura máxima de 1100&nbsp;px.</li>
+            <li>Rodapé dividido em três colunas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Igor Mota · WDD 231 - Desenvolvimento Front-end para Web I</p>
+    <p><a href="../index.html">Voltar à página inicial do curso</a></p>
+  </footer>
+</body>
+</html>
