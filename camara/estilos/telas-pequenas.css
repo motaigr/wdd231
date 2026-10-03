@@ -742,6 +742,16 @@ dialog.modal-info li {
   background-color: #e5e5e5;
 }
 
+/* Crédito exigido pelas licenças das fotos (Wikimedia Commons) */
+.cartao-local figcaption {
+  font-size: 0.7rem;
+  padding-top: 0.25rem;
+}
+
+.cartao-local figcaption a {
+  color: #555;
+}
+
 .cartao-local p {
   grid-area: descricao;
   font-size: 0.9rem;

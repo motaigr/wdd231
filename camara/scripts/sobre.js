@@ -29,6 +29,7 @@ function criarCartaoLocal(local, indice) {
       <img src="imagens/sobre/${local.imagem}" alt="Foto de ${local.nome}"
            width="300" height="200" loading="lazy"
            onerror="this.src='imagens/imagem-indisponivel.svg'">
+      <figcaption><a href="${local.fonte}" target="_blank" rel="noopener noreferrer">${local.credito}</a></figcaption>
     </figure>
     <address>${local.endereco}</address>
     <p>${local.descricao}</p>
