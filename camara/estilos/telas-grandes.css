@@ -1,94 +1,94 @@
 /* =========================================================
-   MEDIA QUERIES - abordagem MOBILE-FIRST
+   CONSULTAS DE MÍDIA - abordagem que começa pelo celular
    As regras base ficam em telas-pequenas.css e já cobrem
    320px+. A partir daqui, ampliamos o layout para telas
    médias e grandes.
    ========================================================= */
 
-/* Tablets (~600px) */
+/* Telas médias (~600px) */
 @media (min-width: 600px) {
-  .members-container.grid-view {
+  .lista-membros.visualizacao-grade {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .featured-members {
+  .membros-destaque {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Desktops pequenos / tablets grandes (~768px) */
+/* Telas médias maiores (~768px) */
 @media (min-width: 768px) {
-  .menu-toggle {
+  .botao-menu {
     display: none; /* menu horizontal substitui o hambúrguer */
   }
 
-  .primary-nav {
+  .nav-principal {
     display: block;
     width: auto;
     order: 2;
   }
 
-  .primary-nav ul {
+  .nav-principal ul {
     flex-direction: row;
     padding-top: 0;
     gap: 0.5rem;
   }
 
-  .primary-nav a {
+  .nav-principal a {
     border-top: none;
     padding: 0.5rem 0.75rem;
   }
 
-  .directory-intro h1 {
+  .introducao h1 {
     font-size: 2rem;
   }
 
-  .hero-image {
+  .capa-imagem {
     height: 380px;
   }
 
-  .hero-content h1 {
+  .capa-conteudo h1 {
     font-size: 2.2rem;
   }
 
-  .hero-content p {
+  .capa-conteudo p {
     font-size: 1.05rem;
   }
 
-  .home-grid {
+  .grade-inicio {
     grid-template-columns: 1fr 1fr;
   }
 
-  .featured-section {
+  .secao-destaques {
     grid-column: 1 / -1;
   }
 
-  .featured-members {
+  .membros-destaque {
     grid-template-columns: repeat(3, 1fr);
   }
 
   /* Página Associe-se: formulário à esquerda, cartões de nível à direita */
-  .join-layout {
+  .grade-associacao {
     grid-template-columns: 1.4fr 1fr;
     align-items: start;
   }
 }
 
-/* Desktops (~1000px) */
+/* Telas grandes (~1000px) */
 @media (min-width: 1000px) {
-  .members-container.grid-view {
+  .lista-membros.visualizacao-grade {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .home-grid {
+  .grade-inicio {
     grid-template-columns: 1fr 1fr 1.2fr;
   }
 
-  .featured-section {
+  .secao-destaques {
     grid-column: auto;
   }
 
-  .featured-members {
+  .membros-destaque {
     grid-template-columns: 1fr;
   }
 }
@@ -102,7 +102,7 @@
 
 /* Telas médias: foto à esquerda, descrição e endereço à direita */
 @media (min-width: 641px) {
-  .local-card {
+  .cartao-local {
     grid-template-columns: minmax(0, 300px) 1fr;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
@@ -112,16 +112,16 @@
       "botao  botao";
   }
 
-  .local-card address {
+  .cartao-local address {
     align-self: end;
   }
 
   /* Efeito ao passar o mouse: só fora da visualização móvel */
-  .local-card img {
+  .cartao-local img {
     transition: transform 0.4s ease, filter 0.4s ease;
   }
 
-  .local-card:hover img {
+  .cartao-local:hover img {
     transform: scale(1.08);
     filter: saturate(1.3) brightness(1.05);
   }
@@ -129,11 +129,11 @@
 
 /* Telas grandes: duas colunas de cartões e foto ocupando toda a lateral */
 @media (min-width: 1025px) {
-  .locais-grid {
+  .grade-locais {
     grid-template-columns: 1fr 1fr;
   }
 
-  .local-card {
+  .cartao-local {
     grid-template-columns: minmax(0, 240px) 1fr;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
@@ -143,11 +143,11 @@
       "foto botao";
   }
 
-  .local-card figure {
+  .cartao-local figure {
     align-self: start;
   }
 
-  .local-card .saiba-mais {
+  .cartao-local .saiba-mais {
     justify-self: start;
   }
 }

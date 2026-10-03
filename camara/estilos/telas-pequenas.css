@@ -1,5 +1,5 @@
 /* =========================================================
-   VARIÁVEIS GLOBAIS (Design Tokens)
+   VARIÁVEIS GLOBAIS (Variáveis de projeto)
    Centralizar cores/tamanhos facilita manutenção e garante
    consistência visual em todo o projeto.
    ========================================================= */
@@ -27,12 +27,12 @@ body {
 
 /* =========================================================
    CABEÇALHO
-   Mobile-first: por padrão o menu fica oculto e vira um
+   Começando pelo celular: por padrão o menu fica oculto e vira um
    dropdown ativado pelo botão hambúrguer. A partir de 768px
    (em telas-grandes.css) o menu horizontal aparece e o botão
    é escondido.
    ========================================================= */
-.site-header {
+.cabecalho-site {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
   position: sticky;
@@ -41,7 +41,7 @@ body {
   box-shadow: var(--sombra);
 }
 
-.header-container {
+.cabecalho-conteudo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +51,7 @@ body {
   margin: 0 auto;
 }
 
-.brand {
+.marca {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -61,20 +61,20 @@ body {
   border-radius: 50%;
 }
 
-.brand-name {
+.marca-nome {
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.15;
 }
 
-.brand-name span {
+.marca-nome span {
   font-weight: 400;
   font-size: 0.8rem;
   opacity: 0.85;
 }
 
 /* Botão hambúrguer */
-.menu-toggle {
+.botao-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,7 +82,7 @@ body {
   height: 20px;
 }
 
-.menu-toggle .bar {
+.botao-menu .barra {
   display: block;
   height: 3px;
   width: 100%;
@@ -90,31 +90,31 @@ body {
   border-radius: 2px;
 }
 
-/* Navegação: escondida por padrão em telas pequenas, vira dropdown */
-.primary-nav {
+/* Navegação: escondida por padrão em telas pequenas, vira um menu suspenso */
+.nav-principal {
   display: none;
   width: 100%;
   order: 3;
 }
 
-.primary-nav.open {
+.nav-principal.open {
   display: block;
 }
 
-.primary-nav ul {
+.nav-principal ul {
   display: flex;
   flex-direction: column;
   padding-top: 0.75rem;
 }
 
-.primary-nav a {
+.nav-principal a {
   display: block;
   padding: 0.65rem 0.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.95rem;
 }
 
-.primary-nav a.active {
+.nav-principal a.ativo {
   color: var(--cor-secundaria);
   font-weight: 700;
 }
@@ -128,26 +128,26 @@ main {
   padding: 1.25rem 1rem 3rem;
 }
 
-.directory-intro h1 {
+.introducao h1 {
   font-size: 1.6rem;
   color: var(--cor-primaria);
   margin-bottom: 0.5rem;
 }
 
-.directory-intro p {
+.introducao p {
   font-size: 0.95rem;
   max-width: 60ch;
   margin-bottom: 1rem;
 }
 
-/* Controles de alternância Grid/Lista */
-.view-controls {
+/* Controles de alternância Grade/Lista */
+.controles-visualizacao {
   display: flex;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
 }
 
-.view-btn {
+.botao-visualizacao {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -161,43 +161,43 @@ main {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.view-btn svg {
+.botao-visualizacao svg {
   fill: currentColor;
 }
 
-.view-btn.active,
-.view-btn:hover {
+.botao-visualizacao.ativo,
+.botao-visualizacao:hover {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
 }
 
 /* =========================================================
    ÁREA DE MEMBROS
-   Duas variações controladas via JS: grid-view e list-view.
-   Mobile-first: em telas pequenas o grid vira 1 coluna.
+   Duas variações controladas via JS: visualizacao-grade e visualizacao-lista.
+   Começando pelo celular: em telas pequenas a grade vira 1 coluna.
    ========================================================= */
-.members-container {
+.lista-membros {
   display: grid;
   gap: 1.25rem;
 }
 
-.members-container.grid-view {
-  grid-template-columns: 1fr; /* 1 coluna no mobile */
+.lista-membros.visualizacao-grade {
+  grid-template-columns: 1fr; /* 1 coluna no celular */
 }
 
-.members-container.list-view {
+.lista-membros.visualizacao-lista {
   grid-template-columns: 1fr; /* lista sempre em coluna única, mas cartões mais "achatados" */
 }
 
-.loading-message {
+.mensagem-carregando {
   grid-column: 1 / -1;
   text-align: center;
   padding: 2rem 0;
   color: var(--cor-primaria);
 }
 
-/* Cartão de membro (compartilhado entre grid e lista, com pequenas variações) */
-.member-card {
+/* Cartão de membro (compartilhado entre grade e lista, com pequenas variações) */
+.cartao-membro {
   background-color: var(--cor-branco);
   border-radius: var(--raio);
   box-shadow: var(--sombra);
@@ -207,18 +207,18 @@ main {
   border-top: 4px solid var(--cor-prata); /* cor trocada via classe de nível */
 }
 
-.member-card.level-1 { border-top-color: var(--cor-prata); }
-.member-card.level-2 { border-top-color: #c0c0c0; }
-.member-card.level-3 { border-top-color: var(--cor-secundaria); }
+.cartao-membro.nivel-1 { border-top-color: var(--cor-prata); }
+.cartao-membro.nivel-2 { border-top-color: #c0c0c0; }
+.cartao-membro.nivel-3 { border-top-color: var(--cor-secundaria); }
 
-.member-card img {
+.cartao-membro img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  background-color: #e5e5e5; /* placeholder enquanto a imagem fictícia não existe */
+  background-color: #e5e5e5; /* cor de fundo enquanto a imagem não carrega */
 }
 
-.member-info {
+.info-membro {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -226,16 +226,16 @@ main {
   flex: 1;
 }
 
-.member-info h2 {
+.info-membro h2 {
   font-size: 1.05rem;
   color: var(--cor-primaria);
 }
 
-.member-info p {
+.info-membro p {
   font-size: 0.85rem;
 }
 
-.membership-badge {
+.selo-nivel {
   align-self: flex-start;
   font-size: 0.7rem;
   font-weight: 700;
@@ -245,11 +245,11 @@ main {
   color: var(--cor-texto);
 }
 
-.membership-badge.level-1 { background-color: var(--cor-prata); }
-.membership-badge.level-2 { background-color: #8c8c8c; }
-.membership-badge.level-3 { background-color: var(--cor-secundaria); }
+.selo-nivel.nivel-1 { background-color: var(--cor-prata); }
+.selo-nivel.nivel-2 { background-color: #8c8c8c; }
+.selo-nivel.nivel-3 { background-color: var(--cor-secundaria); }
 
-.member-info a.website-link {
+.info-membro a.link-site {
   margin-top: 0.4rem;
   font-size: 0.85rem;
   font-weight: 600;
@@ -258,26 +258,26 @@ main {
   align-self: flex-start;
 }
 
-/* Layout específico para o modo LISTA: imagem ao lado do texto */
-.list-view .member-card {
+/* Disposição específica do modo LISTA: imagem ao lado do texto */
+.visualizacao-lista .cartao-membro {
   flex-direction: row;
   border-top: none;
   border-left: 4px solid var(--cor-prata);
 }
 
-.list-view .member-card.level-1 { border-left-color: var(--cor-prata); }
-.list-view .member-card.level-2 { border-left-color: #c0c0c0; }
-.list-view .member-card.level-3 { border-left-color: var(--cor-secundaria); }
+.visualizacao-lista .cartao-membro.nivel-1 { border-left-color: var(--cor-prata); }
+.visualizacao-lista .cartao-membro.nivel-2 { border-left-color: #c0c0c0; }
+.visualizacao-lista .cartao-membro.nivel-3 { border-left-color: var(--cor-secundaria); }
 
 /* No modo lista as imagens ficam ocultas, mostrando só as informações do membro */
-.list-view .member-card img {
+.visualizacao-lista .cartao-membro img {
   display: none;
 }
 
 /* =========================================================
    PÁGINA INICIAL
    ========================================================= */
-.hero {
+.capa {
   position: relative;
   border-radius: var(--raio);
   overflow: hidden;
@@ -285,14 +285,14 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.hero-image {
+.capa-imagem {
   display: block;
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
 
-.hero-content {
+.capa-conteudo {
   position: absolute;
   inset: 0;
   display: flex;
@@ -305,16 +305,16 @@ main {
   color: var(--cor-branco);
 }
 
-.hero-content h1 {
+.capa-conteudo h1 {
   font-size: 1.4rem;
 }
 
-.hero-content p {
+.capa-conteudo p {
   max-width: 45ch;
   font-size: 0.9rem;
 }
 
-.cta-button {
+.botao-chamada {
   align-self: flex-start;
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
@@ -325,46 +325,46 @@ main {
   transition: background-color 0.2s ease;
 }
 
-.cta-button:hover {
+.botao-chamada:hover {
   background-color: #c19c2c;
 }
 
-/* Grid com as seções de Eventos, Tempo e Destaques */
-.home-grid {
+/* Grade com as seções de Eventos, Tempo e Destaques */
+.grade-inicio {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
-.home-card {
+.cartao-inicio {
   background-color: var(--cor-branco);
   border-radius: var(--raio);
   box-shadow: var(--sombra);
   padding: 1.25rem;
 }
 
-.home-card h2 {
+.cartao-inicio h2 {
   color: var(--cor-primaria);
   font-size: 1.1rem;
   margin-bottom: 0.9rem;
 }
 
 /* Eventos atuais */
-.event-list {
+.lista-eventos {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
 }
 
-.event-card {
+.cartao-evento {
   display: flex;
   gap: 0.75rem;
   border-left: 4px solid var(--cor-secundaria);
   padding-left: 0.75rem;
 }
 
-.event-date {
+.data-evento {
   min-width: 3.5rem;
   font-weight: 700;
   font-size: 0.8rem;
@@ -372,40 +372,40 @@ main {
   white-space: nowrap;
 }
 
-.event-card h3 {
+.cartao-evento h3 {
   font-size: 0.95rem;
   margin-bottom: 0.15rem;
 }
 
-.event-card p {
+.cartao-evento p {
   font-size: 0.8rem;
 }
 
 /* Tempo em Curitiba */
-.weather-current {
+.clima-atual {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.weather-temp {
+.clima-temperatura {
   font-size: 2rem;
   font-weight: 700;
   color: var(--cor-primaria);
 }
 
-.weather-desc {
+.clima-descricao {
   font-size: 0.9rem;
   text-transform: capitalize;
 }
 
-.weather-forecast {
+.previsao-clima {
   list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
 }
 
-.forecast-day {
+.previsao-dia {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,17 +414,17 @@ main {
   text-transform: capitalize;
 }
 
-.forecast-day-name {
+.previsao-dia-nome {
   font-weight: 600;
   color: var(--cor-primaria);
 }
 
-.forecast-temp {
+.previsao-temperatura {
   font-weight: 700;
 }
 
-/* Membros em destaque (reaproveita o visual do .member-card do Diretório) */
-.featured-members {
+/* Membros em destaque (reaproveita o visual do .cartao-membro do Diretório) */
+.membros-destaque {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -432,10 +432,10 @@ main {
 
 /* =========================================================
    PÁGINA ASSOCIE-SE
-   Mobile-first: formulário e cartões de nível empilhados em
+   Começando pelo celular: formulário e cartões de nível empilhados em
    uma única coluna, com os cartões abaixo do formulário.
    ========================================================= */
-.join-layout {
+.grade-associacao {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -443,20 +443,20 @@ main {
 }
 
 /* --- Formulário --- */
-.join-form-section h2,
-.membership-cards-section h2 {
+.secao-formulario h2,
+.secao-niveis h2 {
   color: var(--cor-primaria);
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.join-form {
+.formulario-associacao {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.form-group label {
+.grupo-campo label {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -465,8 +465,8 @@ main {
   color: var(--cor-primaria);
 }
 
-.form-group input,
-.form-group textarea {
+.grupo-campo input,
+.grupo-campo textarea {
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 400;
@@ -477,38 +477,38 @@ main {
   border-radius: var(--raio);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
   outline: 2px solid var(--cor-secundaria);
   outline-offset: 1px;
 }
 
-.form-group textarea {
+.grupo-campo textarea {
   resize: vertical;
   min-height: 90px;
 }
 
-.membership-choice {
+.escolha-nivel {
   border: 1.5px solid var(--cor-primaria);
   border-radius: var(--raio);
   padding: 0.75rem;
 }
 
-.membership-choice legend {
+.escolha-nivel legend {
   font-weight: 700;
   color: var(--cor-primaria);
   font-size: 0.9rem;
   padding: 0 0.4rem;
 }
 
-.radio-options {
+.opcoes-nivel {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.radio-options label {
+.opcoes-nivel label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -517,7 +517,7 @@ main {
   color: var(--cor-texto);
 }
 
-.join-form button[type="submit"] {
+.formulario-associacao button[type="submit"] {
   align-self: flex-start;
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
@@ -530,18 +530,18 @@ main {
   transition: background-color 0.2s ease;
 }
 
-.join-form button[type="submit"]:hover {
+.formulario-associacao button[type="submit"]:hover {
   background-color: #c19c2c;
 }
 
 /* --- Cartões de nível de associação --- */
-.membership-cards {
+.cartoes-nivel {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.membership-card {
+.cartao-nivel {
   background-color: var(--cor-branco);
   border-radius: var(--raio);
   box-shadow: var(--sombra);
@@ -552,34 +552,34 @@ main {
   border-top: 4px solid var(--cor-prata);
   opacity: 0;
   transform: translateY(14px);
-  animation: cardFadeIn 0.6s ease forwards;
+  animation: surgirCartao 0.6s ease forwards;
 }
 
-.membership-card.level-np { border-top-color: var(--cor-prata); }
-.membership-card.level-bronze { border-top-color: #b08d57; }
-.membership-card.level-silver { border-top-color: #c0c0c0; }
-.membership-card.level-gold { border-top-color: var(--cor-secundaria); }
+.cartao-nivel.nivel-np { border-top-color: var(--cor-prata); }
+.cartao-nivel.nivel-bronze { border-top-color: #b08d57; }
+.cartao-nivel.nivel-prata { border-top-color: #c0c0c0; }
+.cartao-nivel.nivel-ouro { border-top-color: var(--cor-secundaria); }
 
-.membership-card:nth-child(1) { animation-delay: 0.05s; }
-.membership-card:nth-child(2) { animation-delay: 0.15s; }
-.membership-card:nth-child(3) { animation-delay: 0.25s; }
-.membership-card:nth-child(4) { animation-delay: 0.35s; }
+.cartao-nivel:nth-child(1) { animation-delay: 0.05s; }
+.cartao-nivel:nth-child(2) { animation-delay: 0.15s; }
+.cartao-nivel:nth-child(3) { animation-delay: 0.25s; }
+.cartao-nivel:nth-child(4) { animation-delay: 0.35s; }
 
-@keyframes cardFadeIn {
+@keyframes surgirCartao {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.membership-card h3 {
+.cartao-nivel h3 {
   color: var(--cor-primaria);
   font-size: 1.05rem;
 }
 
-.membership-card p {
+.cartao-nivel p {
   font-size: 0.85rem;
 }
 
-.membership-card .info-btn {
+.cartao-nivel .botao-info {
   align-self: flex-start;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
@@ -592,12 +592,12 @@ main {
   transition: background-color 0.2s ease;
 }
 
-.membership-card .info-btn:hover {
+.cartao-nivel .botao-info:hover {
   background-color: #0f4f3a;
 }
 
 /* --- Modais de detalhes de cada nível --- */
-dialog.info-modal {
+dialog.modal-info {
   border: none;
   border-radius: var(--raio);
   box-shadow: var(--sombra);
@@ -607,30 +607,30 @@ dialog.info-modal {
   color: var(--cor-texto);
 }
 
-dialog.info-modal::backdrop {
+dialog.modal-info::backdrop {
   background-color: rgba(0, 0, 0, 0.55);
 }
 
-dialog.info-modal h3 {
+dialog.modal-info h3 {
   color: var(--cor-primaria);
   margin-bottom: 0.5rem;
 }
 
-dialog.info-modal p {
+dialog.modal-info p {
   font-size: 0.9rem;
 }
 
-dialog.info-modal ul {
+dialog.modal-info ul {
   margin: 0.75rem 0;
   padding-left: 1.2rem;
   font-size: 0.9rem;
 }
 
-dialog.info-modal li {
+dialog.modal-info li {
   margin-bottom: 0.35rem;
 }
 
-.modal-close-btn {
+.botao-fechar-modal {
   margin-top: 1rem;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
@@ -642,7 +642,7 @@ dialog.info-modal li {
 }
 
 /* --- Página de agradecimento --- */
-.thanks-summary {
+.resumo-envio {
   background-color: var(--cor-branco);
   border-radius: var(--raio);
   box-shadow: var(--sombra);
@@ -650,7 +650,7 @@ dialog.info-modal li {
   margin-top: 1rem;
 }
 
-.thanks-summary dt {
+.resumo-envio dt {
   font-weight: 700;
   color: var(--cor-primaria);
   font-size: 0.8rem;
@@ -658,22 +658,22 @@ dialog.info-modal li {
   margin-top: 0.75rem;
 }
 
-.thanks-summary dt:first-child {
+.resumo-envio dt:first-child {
   margin-top: 0;
 }
 
-.thanks-summary dd {
+.resumo-envio dd {
   margin: 0.2rem 0 0;
   font-size: 0.95rem;
 }
 
 /* =========================================================
    PÁGINA SOBRE
-   Mobile-first (320px a 640px): cartões em uma coluna e, dentro
+   Começando pelo celular (320px a 640px): cartões em uma coluna e, dentro
    de cada cartão, as partes empilhadas usando áreas nomeadas.
    Em telas-grandes.css as mesmas áreas são reposicionadas.
    ========================================================= */
-.visit-message {
+.mensagem-visita {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -688,24 +688,24 @@ dialog.info-modal li {
   color: var(--cor-primaria);
 }
 
-.visit-message[hidden] {
+.mensagem-visita[hidden] {
   display: none;
 }
 
-.visit-close {
+.mensagem-visita-fechar {
   font-size: 1.4rem;
   line-height: 1;
   color: var(--cor-primaria);
   padding: 0 0.25rem;
 }
 
-.locais-grid {
+.grade-locais {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
-.local-card {
+.cartao-local {
   background-color: var(--cor-branco);
   border-radius: var(--raio);
   box-shadow: var(--sombra);
@@ -720,20 +720,20 @@ dialog.info-modal li {
     "botao";
 }
 
-.local-card h2 {
+.cartao-local h2 {
   grid-area: titulo;
   font-size: 1.1rem;
   color: var(--cor-primaria);
 }
 
-.local-card figure {
+.cartao-local figure {
   grid-area: foto;
   margin: 0;
   border-radius: var(--raio);
   overflow: hidden;
 }
 
-.local-card img {
+.cartao-local img {
   display: block;
   width: 100%;
   height: auto;
@@ -742,17 +742,17 @@ dialog.info-modal li {
   background-color: #e5e5e5;
 }
 
-.local-card p {
+.cartao-local p {
   grid-area: descricao;
   font-size: 0.9rem;
 }
 
-.local-card address {
+.cartao-local address {
   grid-area: endereco;
   font-size: 0.8rem;
 }
 
-.local-card .saiba-mais {
+.cartao-local .saiba-mais {
   grid-area: botao;
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
@@ -763,14 +763,14 @@ dialog.info-modal li {
   transition: background-color 0.2s ease;
 }
 
-.local-card .saiba-mais:hover {
+.cartao-local .saiba-mais:hover {
   background-color: #0f4f3a;
 }
 
 /* =========================================================
    RODAPÉ
    ========================================================= */
-.site-footer {
+.rodape-site {
   background-color: var(--cor-primaria);
   color: var(--cor-branco);
   text-align: center;
@@ -778,6 +778,6 @@ dialog.info-modal li {
   font-size: 0.8rem;
 }
 
-.footer-container p {
+.rodape-conteudo p {
   margin: 0.15rem 0;
 }

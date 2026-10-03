@@ -6,7 +6,7 @@
 
   <!-- Meta tags básicas -->
   <title>Obrigado | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Confirmação de envio do formulário de associação à Câmara de Comércio de Curitiba.">
+  <meta name="descricao" content="Confirmação de envio do formulário de associação à Câmara de Comércio de Curitiba.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
-  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/normalizacao.css">
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
 
@@ -36,22 +36,22 @@
 <body>
 
   <!-- ===================== CABEÇALHO ===================== -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="brand">
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <div class="marca">
         <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
-        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+        <p class="marca-nome">Câmara de Comércio<br><span>de Curitiba</span></p>
       </div>
 
       <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button id="botao-menu" class="botao-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
       </button>
 
       <!-- ===================== NAVEGAÇÃO ===================== -->
-      <nav id="primary-nav" class="primary-nav">
+      <nav id="nav-principal" class="nav-principal">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="diretorio.html">Diretório</a></li>
@@ -65,13 +65,13 @@
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
-    <section class="directory-intro">
+    <section class="introducao">
       <h1>Obrigado pela sua solicitação!</h1>
       <p>Recebemos os dados abaixo e nossa equipe entrará em contato em breve para concluir sua associação à Câmara de Comércio de Curitiba.</p>
     </section>
 
     <!-- Resumo preenchido via JavaScript a partir dos parâmetros da URL -->
-    <dl class="thanks-summary" id="thanks-summary">
+    <dl class="resumo-envio" id="resumo-envio">
       <dt>Nome</dt>
       <dd id="resumo-nome"></dd>
 
@@ -85,16 +85,16 @@
       <dd id="resumo-empresa"></dd>
 
       <dt>Data/Hora do envio</dt>
-      <dd id="resumo-timestamp"></dd>
+      <dd id="resumo-data-envio"></dd>
     </dl>
   </main>
 
   <!-- ===================== RODAPÉ ===================== -->
-  <footer class="site-footer">
-    <div class="footer-container">
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
 
       <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
-      <div class="footer-col footer-contact">
+      <div class="rodape-coluna rodape-contato">
         <h2>Contato</h2>
         <p>Câmara de Comércio de Curitiba</p>
         <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
@@ -103,12 +103,12 @@
       </div>
 
       <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
-      <div class="footer-col footer-dev">
+      <div class="rodape-coluna rodape-desenvolvimento">
         <h2>Desenvolvimento</h2>
         <p>Desenvolvido por Igor Mota</p>
-        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
-        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
-        <p>Última modificação: <span id="last-modified"></span></p>
+        <p>WDD 231 - Desenvolvimento Web Frontend I | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
       </div>
 
     </div>

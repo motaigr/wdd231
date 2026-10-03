@@ -20,38 +20,38 @@ const MS_POR_DIA = 1000 * 60 * 60 * 24;
  * A posição de cada parte é definida no CSS com grid-template-areas.
  */
 function criarCartaoLocal(local, indice) {
-  const card = document.createElement("article");
-  card.className = "local-card";
+  const cartao = document.createElement("article");
+  cartao.className = "cartao-local";
 
-  card.innerHTML = `
+  cartao.innerHTML = `
     <h2>${local.nome}</h2>
     <figure>
       <img src="imagens/sobre/${local.imagem}" alt="Foto de ${local.nome}"
            width="300" height="200" loading="lazy"
-           onerror="this.src='imagens/placeholder.svg'">
+           onerror="this.src='imagens/imagem-indisponivel.svg'">
     </figure>
     <address>${local.endereco}</address>
     <p>${local.descricao}</p>
     <button type="button" class="saiba-mais" data-indice="${indice}">Saiba mais</button>
   `;
 
-  return card;
+  return cartao;
 }
 
 function exibirLocais() {
-  const container = document.getElementById("locais");
+  const area = document.getElementById("locais");
   locais.forEach((local, indice) => {
-    container.appendChild(criarCartaoLocal(local, indice));
+    area.appendChild(criarCartaoLocal(local, indice));
   });
 }
 
 function configurarModal() {
-  const modal = document.getElementById("local-modal");
+  const modal = document.getElementById("modal-local");
   const titulo = document.getElementById("modal-titulo");
   const detalhe = document.getElementById("modal-detalhe");
   const mapa = document.getElementById("modal-mapa");
 
-  // Um único listener no container atende a todos os botões "Saiba mais"
+  // Um único ouvinte de evento na área de locais atende a todos os botões "Saiba mais"
   document.getElementById("locais").addEventListener("click", (evento) => {
     const botao = evento.target.closest(".saiba-mais");
     if (!botao) return;
@@ -63,7 +63,7 @@ function configurarModal() {
     modal.showModal();
   });
 
-  modal.querySelector(".modal-close-btn").addEventListener("click", () => modal.close());
+  modal.querySelector(".botao-fechar-modal").addEventListener("click", () => modal.close());
 }
 
 /**
@@ -87,11 +87,11 @@ function exibirMensagemDeVisita() {
   const agora = Date.now();
   const ultimaVisita = Number(localStorage.getItem(CHAVE_ULTIMA_VISITA)) || null;
 
-  const caixa = document.getElementById("visit-message");
-  document.getElementById("visit-text").textContent = mensagemDeVisita(ultimaVisita, agora);
+  const caixa = document.getElementById("mensagem-visita");
+  document.getElementById("mensagem-visita-texto").textContent = mensagemDeVisita(ultimaVisita, agora);
   caixa.hidden = false;
 
-  document.getElementById("visit-close").addEventListener("click", () => {
+  document.getElementById("mensagem-visita-fechar").addEventListener("click", () => {
     caixa.hidden = true;
   });
 

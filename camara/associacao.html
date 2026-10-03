@@ -6,7 +6,7 @@
 
   <!-- Meta tags básicas -->
   <title>Associe-se | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Associe sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação.">
+  <meta name="descricao" content="Associe sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
-  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/normalizacao.css">
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
 
@@ -36,26 +36,26 @@
 <body>
 
   <!-- ===================== CABEÇALHO ===================== -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="brand">
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <div class="marca">
         <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
-        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+        <p class="marca-nome">Câmara de Comércio<br><span>de Curitiba</span></p>
       </div>
 
       <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button id="botao-menu" class="botao-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
       </button>
 
       <!-- ===================== NAVEGAÇÃO ===================== -->
-      <nav id="primary-nav" class="primary-nav">
+      <nav id="nav-principal" class="nav-principal">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="diretorio.html">Diretório</a></li>
-          <li><a href="associacao.html" class="active" aria-current="page">Associe-se</a></li>
+          <li><a href="associacao.html" class="ativo" aria-current="page">Associe-se</a></li>
           <li><a href="eventos.html">Eventos</a></li>
           <li><a href="sobre.html">Sobre</a></li>
         </ul>
@@ -65,43 +65,43 @@
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
-    <section class="directory-intro">
+    <section class="introducao">
       <h1>Associe-se</h1>
       <p>Preencha o formulário abaixo para associar sua empresa à Câmara de Comércio de Curitiba e conheça os benefícios de cada nível de associação ao lado.</p>
     </section>
 
-    <!-- Layout de duas colunas: formulário + cartões de nível (mobile-first: cartões abaixo do formulário) -->
-    <div class="join-layout">
+    <!-- Duas colunas: formulário + cartões de nível (no celular, os cartões ficam abaixo do formulário) -->
+    <div class="grade-associacao">
 
       <!-- ===================== FORMULÁRIO DE ASSOCIAÇÃO ===================== -->
-      <section class="home-card join-form-section" aria-labelledby="form-heading">
-        <h2 id="form-heading">Formulário de Associação</h2>
+      <section class="cartao-inicio secao-formulario" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Formulário de Associação</h2>
 
-        <form class="join-form" action="agradecimento.html" method="get">
+        <form class="formulario-associacao" action="agradecimento.html" method="get">
 
-          <div class="form-group">
-            <label for="fname">Nome
-              <input type="text" id="fname" name="fname" required
+          <div class="grupo-campo">
+            <label for="nome">Nome
+              <input type="text" id="nome" name="nome" required
                      title="Informe seu nome" autocomplete="given-name">
             </label>
           </div>
 
-          <div class="form-group">
-            <label for="lname">Sobrenome
-              <input type="text" id="lname" name="lname" required
+          <div class="grupo-campo">
+            <label for="sobrenome">Sobrenome
+              <input type="text" id="sobrenome" name="sobrenome" required
                      title="Informe seu sobrenome" autocomplete="family-name">
             </label>
           </div>
 
-          <div class="form-group">
-            <label for="organization-title">Cargo
-              <input type="text" id="organization-title" name="organization-title"
+          <div class="grupo-campo">
+            <label for="cargo">Cargo
+              <input type="text" id="cargo" name="cargo"
                      title="Apenas letras, espaços e hífens, com no mínimo 7 caracteres"
                      autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
             </label>
           </div>
 
-          <div class="form-group">
+          <div class="grupo-campo">
             <label for="email">E-mail
               <input type="email" id="email" name="email" required
                      title="Informe um e-mail válido" autocomplete="email"
@@ -109,69 +109,69 @@
             </label>
           </div>
 
-          <div class="form-group">
-            <label for="phone">Telefone
-              <input type="tel" id="phone" name="phone" required
+          <div class="grupo-campo">
+            <label for="telefone">Telefone
+              <input type="tel" id="telefone" name="telefone" required
                      title="Informe um telefone para contato" autocomplete="tel">
             </label>
           </div>
 
-          <div class="form-group">
-            <label for="organization">Nome da Empresa/Organização
-              <input type="text" id="organization" name="organization" required
+          <div class="grupo-campo">
+            <label for="empresa">Nome da Empresa/Organização
+              <input type="text" id="empresa" name="empresa" required
                      title="Informe o nome da sua empresa ou organização" autocomplete="organization">
             </label>
           </div>
 
-          <fieldset class="membership-choice">
+          <fieldset class="escolha-nivel">
             <legend>Nível de Associação</legend>
-            <div class="radio-options">
-              <label><input type="radio" name="membership-level" value="np" required> Sem fins lucrativos (NP)</label>
-              <label><input type="radio" name="membership-level" value="bronze"> Bronze</label>
-              <label><input type="radio" name="membership-level" value="silver"> Prata</label>
-              <label><input type="radio" name="membership-level" value="gold"> Ouro</label>
+            <div class="opcoes-nivel">
+              <label><input type="radio" name="nivel" value="np" required> Sem fins lucrativos (NP)</label>
+              <label><input type="radio" name="nivel" value="bronze"> Bronze</label>
+              <label><input type="radio" name="nivel" value="silver"> Prata</label>
+              <label><input type="radio" name="nivel" value="gold"> Ouro</label>
             </div>
           </fieldset>
 
-          <div class="form-group">
-            <label for="description">Descrição da Organização
-              <textarea id="description" name="description" title="Descreva brevemente sua empresa ou organização" rows="4"></textarea>
+          <div class="grupo-campo">
+            <label for="descricao">Descrição da Organização
+              <textarea id="descricao" name="descricao" title="Descreva brevemente sua empresa ou organização" rows="4"></textarea>
             </label>
           </div>
 
-          <input type="hidden" name="timestamp" id="timestamp">
+          <input type="hidden" name="data-envio" id="data-envio">
 
           <button type="submit">Enviar solicitação</button>
         </form>
       </section>
 
       <!-- ===================== NÍVEIS DE ASSOCIAÇÃO ===================== -->
-      <section class="membership-cards-section" aria-labelledby="cards-heading">
-        <h2 id="cards-heading">Níveis de Associação</h2>
+      <section class="secao-niveis" aria-labelledby="titulo-niveis">
+        <h2 id="titulo-niveis">Níveis de Associação</h2>
 
-        <div class="membership-cards">
-          <article class="membership-card level-np">
+        <div class="cartoes-nivel">
+          <article class="cartao-nivel nivel-np">
             <h3>Sem fins lucrativos (NP)</h3>
             <p>Ideal para organizações sem fins lucrativos da nossa comunidade.</p>
-            <button type="button" class="info-btn" data-modal-target="modal-np">Mais informações</button>
+            <button type="button" class="botao-info" data-modal-alvo="modal-np">Mais informações</button>
           </article>
 
-          <article class="membership-card level-bronze">
+          <article class="cartao-nivel nivel-bronze">
             <h3>Bronze</h3>
             <p>Ponto de partida para pequenas empresas que estão começando a crescer.</p>
-            <button type="button" class="info-btn" data-modal-target="modal-bronze">Mais informações</button>
+            <button type="button" class="botao-info" data-modal-alvo="modal-bronze">Mais informações</button>
           </article>
 
-          <article class="membership-card level-silver">
+          <article class="cartao-nivel nivel-prata">
             <h3>Prata</h3>
             <p>Mais visibilidade e benefícios para empresas em expansão.</p>
-            <button type="button" class="info-btn" data-modal-target="modal-silver">Mais informações</button>
+            <button type="button" class="botao-info" data-modal-alvo="modal-prata">Mais informações</button>
           </article>
 
-          <article class="membership-card level-gold">
+          <article class="cartao-nivel nivel-ouro">
             <h3>Ouro</h3>
             <p>Máximo destaque e benefícios para grandes parceiros da Câmara.</p>
-            <button type="button" class="info-btn" data-modal-target="modal-gold">Mais informações</button>
+            <button type="button" class="botao-info" data-modal-alvo="modal-ouro">Mais informações</button>
           </article>
         </div>
       </section>
@@ -179,7 +179,7 @@
     </div>
 
     <!-- ===================== MODAIS COM DETALHES DE CADA NÍVEL ===================== -->
-    <dialog id="modal-np" class="info-modal">
+    <dialog id="modal-np" class="modal-info">
       <h3>Sem fins lucrativos (NP)</h3>
       <p>Taxa anual: gratuita para organizações sem fins lucrativos registradas.</p>
       <ul>
@@ -187,10 +187,10 @@
         <li>Divulgação de eventos da organização</li>
         <li>Acesso a workshops e capacitações</li>
       </ul>
-      <button type="button" class="modal-close-btn">Fechar</button>
+      <button type="button" class="botao-fechar-modal">Fechar</button>
     </dialog>
 
-    <dialog id="modal-bronze" class="info-modal">
+    <dialog id="modal-bronze" class="modal-info">
       <h3>Bronze</h3>
       <p>Taxa anual: R$ 300,00.</p>
       <ul>
@@ -198,10 +198,10 @@
         <li>Uso do selo de membro no site da empresa</li>
         <li>Descontos em eventos da Câmara</li>
       </ul>
-      <button type="button" class="modal-close-btn">Fechar</button>
+      <button type="button" class="botao-fechar-modal">Fechar</button>
     </dialog>
 
-    <dialog id="modal-silver" class="info-modal">
+    <dialog id="modal-prata" class="modal-info">
       <h3>Prata</h3>
       <p>Taxa anual: R$ 600,00.</p>
       <ul>
@@ -209,10 +209,10 @@
         <li>Chance de aparecer nos membros em destaque da página inicial</li>
         <li>Divulgação em nossas redes sociais</li>
       </ul>
-      <button type="button" class="modal-close-btn">Fechar</button>
+      <button type="button" class="botao-fechar-modal">Fechar</button>
     </dialog>
 
-    <dialog id="modal-gold" class="info-modal">
+    <dialog id="modal-ouro" class="modal-info">
       <h3>Ouro</h3>
       <p>Taxa anual: R$ 1.200,00.</p>
       <ul>
@@ -220,16 +220,16 @@
         <li>Prioridade nos membros em destaque da página inicial</li>
         <li>Participação como patrocinador em eventos da Câmara</li>
       </ul>
-      <button type="button" class="modal-close-btn">Fechar</button>
+      <button type="button" class="botao-fechar-modal">Fechar</button>
     </dialog>
   </main>
 
   <!-- ===================== RODAPÉ ===================== -->
-  <footer class="site-footer">
-    <div class="footer-container">
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
 
       <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
-      <div class="footer-col footer-contact">
+      <div class="rodape-coluna rodape-contato">
         <h2>Contato</h2>
         <p>Câmara de Comércio de Curitiba</p>
         <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
@@ -238,12 +238,12 @@
       </div>
 
       <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
-      <div class="footer-col footer-dev">
+      <div class="rodape-coluna rodape-desenvolvimento">
         <h2>Desenvolvimento</h2>
         <p>Desenvolvido por Igor Mota</p>
-        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
-        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
-        <p>Última modificação: <span id="last-modified"></span></p>
+        <p>WDD 231 - Desenvolvimento Web Frontend I | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
       </div>
 
     </div>

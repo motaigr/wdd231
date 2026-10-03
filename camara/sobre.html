@@ -6,7 +6,7 @@
 
   <!-- Meta tags básicas -->
   <title>Sobre Curitiba | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Conheça Curitiba: dados da cidade e oito pontos de interesse para quem vive, investe ou visita a capital paranaense.">
+  <meta name="descricao" content="Conheça Curitiba: dados da cidade e oito pontos de interesse para quem vive, investe ou visita a capital paranaense.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
-  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/normalizacao.css">
   <link rel="stylesheet" href="estilos/telas-pequenas.css">
   <link rel="stylesheet" href="estilos/telas-grandes.css">
 
@@ -37,28 +37,28 @@
 <body>
 
   <!-- ===================== CABEÇALHO ===================== -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="brand">
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <div class="marca">
         <img src="imagens/logo-camara.png" alt="Logo da Câmara de Comércio de Curitiba" class="logo" width="48" height="48">
-        <p class="brand-name">Câmara de Comércio<br><span>de Curitiba</span></p>
+        <p class="marca-nome">Câmara de Comércio<br><span>de Curitiba</span></p>
       </div>
 
       <!-- Botão hambúrguer: exibido apenas em telas pequenas via CSS -->
-      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button id="botao-menu" class="botao-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="barra"></span>
+        <span class="barra"></span>
+        <span class="barra"></span>
       </button>
 
       <!-- ===================== NAVEGAÇÃO ===================== -->
-      <nav id="primary-nav" class="primary-nav">
+      <nav id="nav-principal" class="nav-principal">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="diretorio.html">Diretório</a></li>
           <li><a href="associacao.html">Associe-se</a></li>
           <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="sobre.html" class="active" aria-current="page">Sobre</a></li>
+          <li><a href="sobre.html" class="ativo" aria-current="page">Sobre</a></li>
         </ul>
       </nav>
     </div>
@@ -67,12 +67,12 @@
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
     <!-- Mensagem sobre a última visita (preenchida por scripts/sobre.js com localStorage) -->
-    <div id="visit-message" class="visit-message" role="status" hidden>
-      <p id="visit-text"></p>
-      <button type="button" id="visit-close" class="visit-close" aria-label="Fechar mensagem">&times;</button>
+    <div id="mensagem-visita" class="mensagem-visita" role="status" hidden>
+      <p id="mensagem-visita-texto"></p>
+      <button type="button" id="mensagem-visita-fechar" class="mensagem-visita-fechar" aria-label="Fechar mensagem">&times;</button>
     </div>
 
-    <section class="directory-intro">
+    <section class="introducao">
       <h1>Sobre Curitiba</h1>
       <p>
         Capital do Paraná, Curitiba foi fundada em 1693 e tem cerca de 1,77 milhão de habitantes
@@ -83,23 +83,23 @@
     </section>
 
     <!-- Cartões gerados por scripts/sobre.js a partir de dados/locais.mjs -->
-    <section class="locais-grid" id="locais" aria-label="Pontos de interesse de Curitiba"></section>
+    <section class="grade-locais" id="locais" aria-label="Pontos de interesse de Curitiba"></section>
 
     <!-- Modal reutilizado pelos botões "Saiba mais" -->
-    <dialog id="local-modal" class="info-modal">
+    <dialog id="modal-local" class="modal-info">
       <h3 id="modal-titulo"></h3>
       <p id="modal-detalhe"></p>
       <p><a id="modal-mapa" href="#" target="_blank" rel="noopener noreferrer">Ver no mapa</a></p>
-      <button type="button" class="modal-close-btn">Fechar</button>
+      <button type="button" class="botao-fechar-modal">Fechar</button>
     </dialog>
   </main>
 
   <!-- ===================== RODAPÉ ===================== -->
-  <footer class="site-footer">
-    <div class="footer-container">
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
 
       <!-- Coluna 1: informações de contato da própria Câmara de Comércio -->
-      <div class="footer-col footer-contact">
+      <div class="rodape-coluna rodape-contato">
         <h2>Contato</h2>
         <p>Câmara de Comércio de Curitiba</p>
         <p>Rua XV de Novembro, 100 - Centro, Curitiba - PR</p>
@@ -108,12 +108,12 @@
       </div>
 
       <!-- Coluna 2: informações de desenvolvimento do site (exigidas pela tarefa) -->
-      <div class="footer-col footer-dev">
+      <div class="rodape-coluna rodape-desenvolvimento">
         <h2>Desenvolvimento</h2>
         <p>Desenvolvido por Igor Mota</p>
-        <p>WDD 231 - Dynamic Web Fundamentals | BYU-Pathway Worldwide</p>
-        <p>&copy; <span id="current-year"></span> Igor Mota. Todos os direitos reservados.</p>
-        <p>Última modificação: <span id="last-modified"></span></p>
+        <p>WDD 231 - Desenvolvimento Web Frontend I | BYU-Pathway Worldwide</p>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota. Todos os direitos reservados.</p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
       </div>
 
     </div>

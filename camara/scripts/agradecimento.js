@@ -6,7 +6,7 @@
    com as demais páginas da Câmara de Comércio)
    ========================================================= */
 
-function formatarTimestamp(valor) {
+function formatarDataEnvio(valor) {
   if (!valor) return "Não informado";
 
   const data = new Date(valor);
@@ -18,13 +18,13 @@ function formatarTimestamp(valor) {
 function exibirDadosEnviados() {
   const parametros = new URLSearchParams(window.location.search);
 
-  const nomeCompleto = `${parametros.get("fname") || ""} ${parametros.get("lname") || ""}`.trim();
+  const nomeCompleto = `${parametros.get("nome") || ""} ${parametros.get("sobrenome") || ""}`.trim();
 
   document.getElementById("resumo-nome").textContent = nomeCompleto || "Não informado";
   document.getElementById("resumo-email").textContent = parametros.get("email") || "Não informado";
-  document.getElementById("resumo-telefone").textContent = parametros.get("phone") || "Não informado";
-  document.getElementById("resumo-empresa").textContent = parametros.get("organization") || "Não informado";
-  document.getElementById("resumo-timestamp").textContent = formatarTimestamp(parametros.get("timestamp"));
+  document.getElementById("resumo-telefone").textContent = parametros.get("telefone") || "Não informado";
+  document.getElementById("resumo-empresa").textContent = parametros.get("empresa") || "Não informado";
+  document.getElementById("resumo-data-envio").textContent = formatarDataEnvio(parametros.get("data-envio"));
 }
 
 document.addEventListener("DOMContentLoaded", exibirDadosEnviados);

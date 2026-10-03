@@ -9,25 +9,25 @@
    com as demais páginas da Câmara de Comércio)
    ========================================================= */
 
-function configurarTimestamp() {
-  const campoTimestamp = document.getElementById("timestamp");
-  campoTimestamp.value = new Date().toISOString();
+function configurarDataEnvio() {
+  const campoDataEnvio = document.getElementById("data-envio");
+  campoDataEnvio.value = new Date().toISOString();
 }
 
 /**
- * Cada botão "Mais informações" tem um atributo data-modal-target
+ * Cada botão "Mais informações" tem um atributo data-modal-alvo
  * com o id do <dialog> correspondente. Cada modal tem um botão
- * .modal-close-btn responsável por fechá-lo.
+ * .botao-fechar-modal responsável por fechá-lo.
  */
 function configurarModais() {
-  document.querySelectorAll("[data-modal-target]").forEach((botao) => {
-    const modal = document.getElementById(botao.dataset.modalTarget);
+  document.querySelectorAll("[data-modal-alvo]").forEach((botao) => {
+    const modal = document.getElementById(botao.dataset.modalAlvo);
     if (modal) {
       botao.addEventListener("click", () => modal.showModal());
     }
   });
 
-  document.querySelectorAll(".modal-close-btn").forEach((botaoFechar) => {
+  document.querySelectorAll(".botao-fechar-modal").forEach((botaoFechar) => {
     botaoFechar.addEventListener("click", () => {
       botaoFechar.closest("dialog").close();
     });
@@ -35,7 +35,7 @@ function configurarModais() {
 }
 
 function iniciar() {
-  configurarTimestamp();
+  configurarDataEnvio();
   configurarModais();
 }
 

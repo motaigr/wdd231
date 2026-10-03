@@ -18,41 +18,41 @@ const NIVEIS = {
  * Constrói o HTML de um único cartão de membro a partir do objeto da empresa.
  */
 function criarCartaoMembro(empresa) {
-  const card = document.createElement("article");
-  card.className = `member-card level-${empresa.membership_level}`;
+  const cartao = document.createElement("article");
+  cartao.className = `cartao-membro nivel-${empresa.nivel}`;
 
   // Caminho da imagem: usamos a pasta local "imagens/" como convenção do projeto
-  const caminhoImagem = `imagens/${empresa.image}`;
+  const caminhoImagem = `imagens/${empresa.imagem}`;
 
-  card.innerHTML = `
-    <img src="${caminhoImagem}" alt="Logo de ${empresa.name}" loading="lazy"
-         onerror="this.src='imagens/placeholder.svg'">
-    <div class="member-info">
-      <span class="membership-badge level-${empresa.membership_level}">
-        ${NIVEIS[empresa.membership_level] || "Membro"}
+  cartao.innerHTML = `
+    <img src="${caminhoImagem}" alt="Logo de ${empresa.nome}" loading="lazy"
+         onerror="this.src='imagens/imagem-indisponivel.svg'">
+    <div class="info-membro">
+      <span class="selo-nivel nivel-${empresa.nivel}">
+        ${NIVEIS[empresa.nivel] || "Membro"}
       </span>
-      <h2>${empresa.name}</h2>
-      <p>${empresa.address}</p>
-      <p>${empresa.phone}</p>
-      <p>${empresa.additional_info}</p>
-      <a class="website-link" href="${empresa.website}" target="_blank" rel="noopener noreferrer">
+      <h2>${empresa.nome}</h2>
+      <p>${empresa.endereco}</p>
+      <p>${empresa.telefone}</p>
+      <p>${empresa.informacoes}</p>
+      <a class="link-site" href="${empresa.site}" target="_blank" rel="noopener noreferrer">
         Visitar site
       </a>
     </div>
   `;
 
-  return card;
+  return cartao;
 }
 
 function configurarRodape() {
   const anoAtual = new Date().getFullYear();
-  document.getElementById("current-year").textContent = anoAtual;
-  document.getElementById("last-modified").textContent = document.lastModified;
+  document.getElementById("ano-atual").textContent = anoAtual;
+  document.getElementById("ultima-modificacao").textContent = document.lastModified;
 }
 
 function configurarMenuHamburguer() {
-  const botaoMenu = document.getElementById("menu-toggle");
-  const nav = document.getElementById("primary-nav");
+  const botaoMenu = document.getElementById("botao-menu");
+  const nav = document.getElementById("nav-principal");
 
   botaoMenu.addEventListener("click", () => {
     const estaAberto = nav.classList.toggle("open");

@@ -2,7 +2,7 @@
    diretorio.js
    Responsabilidades:
    1) Buscar os dados dos membros em dados/membros.json
-   2) Renderizar os cartões na área #members-container
+   2) Renderizar os cartões na área #lista-membros
    3) Alternar entre visualização em Grade e em Lista
    (rodapé e menu hambúrguer ficam em comum.js, compartilhado
    com as demais páginas da Câmara de Comércio)
@@ -11,7 +11,7 @@
 /**
  * Busca os dados dos membros no arquivo JSON.
  * Usamos async/await + try/catch para tratar falhas de rede
- * ou de parsing sem travar a página.
+ * ou de leitura do arquivo sem travar a página.
  */
 async function buscarMembros() {
   try {
@@ -22,61 +22,61 @@ async function buscarMembros() {
     }
 
     const dados = await resposta.json();
-    return dados.empresas; // array de empresas
+    return dados.empresas; // lista de empresas
   } catch (erro) {
     console.error("Falha ao carregar membros.json:", erro);
-    return []; // retorna array vazio para a página não quebrar
+    return []; // retorna lista vazia para a página não quebrar
   }
 }
 
 /**
- * Renderiza a lista completa de membros dentro do container principal.
+ * Renderiza a lista completa de membros dentro da área principal.
  * (criarCartaoMembro vem de comum.js, compartilhado com a página inicial)
  */
 function renderizarMembros(listaEmpresas) {
-  const container = document.getElementById("members-container");
-  container.innerHTML = ""; // limpa a mensagem de "Carregando..."
+  const area = document.getElementById("lista-membros");
+  area.innerHTML = ""; // limpa a mensagem de "Carregando..."
 
   if (listaEmpresas.length === 0) {
-    container.innerHTML = "<p class='loading-message'>Não foi possível carregar os membros no momento.</p>";
+    area.innerHTML = "<p class='mensagem-carregando'>Não foi possível carregar os membros no momento.</p>";
     return;
   }
 
   listaEmpresas.forEach((empresa) => {
     const cartao = criarCartaoMembro(empresa);
-    container.appendChild(cartao);
+    area.appendChild(cartao);
   });
 }
 
 /**
- * Controla a alternância entre os modos Grid e Lista.
- * A troca é feita apenas trocando classes CSS no container e
+ * Controla a alternância entre os modos Grade e Lista.
+ * A troca é feita apenas trocando classes CSS na área de membros e
  * atualizando o estado visual/aria dos botões (acessibilidade).
  */
 function configurarAlternanciaDeVisualizacao() {
-  const botaoGrid = document.getElementById("grid-btn");
-  const botaoLista = document.getElementById("list-btn");
-  const container = document.getElementById("members-container");
+  const botaoGrid = document.getElementById("botao-grade");
+  const botaoLista = document.getElementById("botao-lista");
+  const area = document.getElementById("lista-membros");
 
   botaoGrid.addEventListener("click", () => {
-    container.classList.remove("list-view");
-    container.classList.add("grid-view");
+    area.classList.remove("visualizacao-lista");
+    area.classList.add("visualizacao-grade");
 
-    botaoGrid.classList.add("active");
+    botaoGrid.classList.add("ativo");
     botaoGrid.setAttribute("aria-pressed", "true");
 
-    botaoLista.classList.remove("active");
+    botaoLista.classList.remove("ativo");
     botaoLista.setAttribute("aria-pressed", "false");
   });
 
   botaoLista.addEventListener("click", () => {
-    container.classList.remove("grid-view");
-    container.classList.add("list-view");
+    area.classList.remove("visualizacao-grade");
+    area.classList.add("visualizacao-lista");
 
-    botaoLista.classList.add("active");
+    botaoLista.classList.add("ativo");
     botaoLista.setAttribute("aria-pressed", "true");
 
-    botaoGrid.classList.remove("active");
+    botaoGrid.classList.remove("ativo");
     botaoGrid.setAttribute("aria-pressed", "false");
   });
 }
