@@ -18,7 +18,12 @@
 /* =========================================================
    BASE
    ========================================================= */
+/* Regra única de body: inclui também as declarações de normalização
+   (antes em normalizacao.css) para não repetir o seletor */
 body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   font-family: var(--fonte-principal);
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
