@@ -54,16 +54,16 @@ function renderizarMembros(listaEmpresas) {
  * atualizando o estado visual/aria dos botões (acessibilidade).
  */
 function configurarAlternanciaDeVisualizacao() {
-  const botaoGrid = document.getElementById("botao-grade");
+  const botaoGrade = document.getElementById("botao-grade");
   const botaoLista = document.getElementById("botao-lista");
   const area = document.getElementById("lista-membros");
 
-  botaoGrid.addEventListener("click", () => {
+  botaoGrade.addEventListener("click", () => {
     area.classList.remove("visualizacao-lista");
     area.classList.add("visualizacao-grade");
 
-    botaoGrid.classList.add("ativo");
-    botaoGrid.setAttribute("aria-pressed", "true");
+    botaoGrade.classList.add("ativo");
+    botaoGrade.setAttribute("aria-pressed", "true");
 
     botaoLista.classList.remove("ativo");
     botaoLista.setAttribute("aria-pressed", "false");
@@ -76,8 +76,8 @@ function configurarAlternanciaDeVisualizacao() {
     botaoLista.classList.add("ativo");
     botaoLista.setAttribute("aria-pressed", "true");
 
-    botaoGrid.classList.remove("ativo");
-    botaoGrid.setAttribute("aria-pressed", "false");
+    botaoGrade.classList.remove("ativo");
+    botaoGrade.setAttribute("aria-pressed", "false");
   });
 }
 

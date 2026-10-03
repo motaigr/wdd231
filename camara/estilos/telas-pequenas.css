@@ -1,5 +1,5 @@
 /* =========================================================
-   VARIÁVEIS GLOBAIS (Variáveis de projeto)
+   VARIÁVEIS GLOBAIS
    Centralizar cores/tamanhos facilita manutenção e garante
    consistência visual em todo o projeto.
    ========================================================= */
@@ -28,7 +28,7 @@ body {
 /* =========================================================
    CABEÇALHO
    Começando pelo celular: por padrão o menu fica oculto e vira um
-   dropdown ativado pelo botão hambúrguer. A partir de 768px
+   menu suspenso ativado pelo botão hambúrguer. A partir de 768px
    (em telas-grandes.css) o menu horizontal aparece e o botão
    é escondido.
    ========================================================= */
