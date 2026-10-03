@@ -10,7 +10,7 @@
   --cor-fundo: #f4f6f5;
   --cor-texto: #1c1f1e;
   --cor-branco: #ffffff;
-  --sombra: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --sombra: 0 2px 8px #0000001f;
   --raio: 8px;
   --fonte-principal: "Open Sans", "Segoe UI", Verdana, Arial, sans-serif;
 }
@@ -110,7 +110,7 @@ body {
 .nav-principal a {
   display: block;
   padding: 0.65rem 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #ffffff26;
   font-size: 0.95rem;
 }
 
@@ -301,7 +301,7 @@ main {
   gap: 0.75rem;
   padding: 1.5rem;
   background-color: #0b3d2e;
-  background-image: linear-gradient(to top, rgba(11, 61, 46, 0.9), rgba(11, 61, 46, 0.25));
+  background-image: linear-gradient(to top, #0b3d2ee6, #0b3d2e40);
   color: var(--cor-branco);
 }
 
@@ -467,6 +467,7 @@ main {
 
 .grupo-campo input,
 .grupo-campo textarea {
+  resize: vertical;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 400;
@@ -481,11 +482,6 @@ main {
 .grupo-campo textarea:focus {
   outline: 2px solid var(--cor-secundaria);
   outline-offset: 1px;
-}
-
-.grupo-campo textarea {
-  resize: vertical;
-  min-height: 90px;
 }
 
 .escolha-nivel {
@@ -608,9 +604,10 @@ dialog.modal-info {
 }
 
 dialog.modal-info::backdrop {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: #0000008c;
 }
 
+dialog.modal-info h2,
 dialog.modal-info h3 {
   color: var(--cor-primaria);
   margin-bottom: 0.5rem;
