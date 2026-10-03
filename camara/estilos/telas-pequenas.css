@@ -668,6 +668,106 @@ dialog.info-modal li {
 }
 
 /* =========================================================
+   PÁGINA SOBRE
+   Mobile-first (320px a 640px): cartões em uma coluna e, dentro
+   de cada cartão, as partes empilhadas usando áreas nomeadas.
+   Em telas-grandes.css as mesmas áreas são reposicionadas.
+   ========================================================= */
+.visit-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--cor-branco);
+  border-left: 4px solid var(--cor-secundaria);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.visit-message[hidden] {
+  display: none;
+}
+
+.visit-close {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--cor-primaria);
+  padding: 0 0.25rem;
+}
+
+.locais-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.local-card {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem 1rem;
+  grid-template-areas:
+    "titulo"
+    "foto"
+    "descricao"
+    "endereco"
+    "botao";
+}
+
+.local-card h2 {
+  grid-area: titulo;
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+}
+
+.local-card figure {
+  grid-area: foto;
+  margin: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.local-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background-color: #e5e5e5;
+}
+
+.local-card p {
+  grid-area: descricao;
+  font-size: 0.9rem;
+}
+
+.local-card address {
+  grid-area: endereco;
+  font-size: 0.8rem;
+}
+
+.local-card .saiba-mais {
+  grid-area: botao;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.local-card .saiba-mais:hover {
+  background-color: #0f4f3a;
+}
+
+/* =========================================================
    RODAPÉ
    ========================================================= */
 .site-footer {

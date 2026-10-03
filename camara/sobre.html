@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Meta tags básicas -->
-  <title>Eventos | Câmara de Comércio de Curitiba</title>
-  <meta name="description" content="Confira os próximos eventos da Câmara de Comércio de Curitiba.">
+  <title>Sobre Curitiba | Câmara de Comércio de Curitiba</title>
+  <meta name="description" content="Conheça Curitiba: dados da cidade e oito pontos de interesse para quem vive, investe ou visita a capital paranaense.">
   <meta name="author" content="Igor Mota">
 
   <!-- Favicon -->
@@ -18,10 +18,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Eventos | Câmara de Comércio de Curitiba">
-  <meta property="og:description" content="Confira os próximos eventos da Câmara de Comércio de Curitiba.">
+  <meta property="og:title" content="Sobre Curitiba | Câmara de Comércio de Curitiba">
+  <meta property="og:description" content="Conheça Curitiba: dados da cidade e oito pontos de interesse para quem vive, investe ou visita a capital paranaense.">
   <meta property="og:image" content="https://motaigr.github.io/wdd231/camara/imagens/logo-camara.png">
-  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/eventos.html">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/camara/sobre.html">
   <meta property="og:type" content="website">
 
   <!-- CSS: reset/normalização primeiro, depois estilos autorais -->
@@ -31,6 +31,8 @@
 
   <!-- Funções compartilhadas (rodapé + menu hambúrguer) -->
   <script src="scripts/comum.js" defer></script>
+  <!-- Script da página: módulo ES que importa os locais de dados/locais.mjs -->
+  <script type="module" src="scripts/sobre.js"></script>
 </head>
 <body>
 
@@ -55,8 +57,8 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="diretorio.html">Diretório</a></li>
           <li><a href="associacao.html">Associe-se</a></li>
-          <li><a href="eventos.html" class="active" aria-current="page">Eventos</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="sobre.html" class="active" aria-current="page">Sobre</a></li>
         </ul>
       </nav>
     </div>
@@ -64,10 +66,32 @@
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <main>
+    <!-- Mensagem sobre a última visita (preenchida por scripts/sobre.js com localStorage) -->
+    <div id="visit-message" class="visit-message" role="status" hidden>
+      <p id="visit-text"></p>
+      <button type="button" id="visit-close" class="visit-close" aria-label="Fechar mensagem">&times;</button>
+    </div>
+
     <section class="directory-intro">
-      <h1>Eventos</h1>
-      <p>Página em construção. Em breve você poderá conferir aqui a agenda de eventos da Câmara de Comércio de Curitiba.</p>
+      <h1>Sobre Curitiba</h1>
+      <p>
+        Capital do Paraná, Curitiba foi fundada em 1693 e tem cerca de 1,77 milhão de habitantes
+        (Censo IBGE 2022). A cidade é conhecida pelo planejamento urbano, pelo transporte coletivo
+        com canaletas exclusivas para ônibus e pela grande quantidade de parques e bosques.
+        Conheça oito lugares que mostram por que vale a pena viver, investir e passear por aqui.
+      </p>
     </section>
+
+    <!-- Cartões gerados por scripts/sobre.js a partir de dados/locais.mjs -->
+    <section class="locais-grid" id="locais" aria-label="Pontos de interesse de Curitiba"></section>
+
+    <!-- Modal reutilizado pelos botões "Saiba mais" -->
+    <dialog id="local-modal" class="info-modal">
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-detalhe"></p>
+      <p><a id="modal-mapa" href="#" target="_blank" rel="noopener noreferrer">Ver no mapa</a></p>
+      <button type="button" class="modal-close-btn">Fechar</button>
+    </dialog>
   </main>
 
   <!-- ===================== RODAPÉ ===================== -->
