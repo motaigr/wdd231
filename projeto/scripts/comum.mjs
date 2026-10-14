@@ -18,7 +18,8 @@ export function configurarMenu() {
 
 export function configurarRodape() {
   document.getElementById("ano-atual").textContent = new Date().getFullYear();
-  document.getElementById("ultima-modificacao").textContent = document.lastModified;
+  // document.lastModified vem no formato americano (mm/dd/aaaa); exibimos em dd/mm/aaaa
+  document.getElementById("ultima-modificacao").textContent = new Date(document.lastModified).toLocaleDateString("pt-BR");
 }
 
 export function iniciarPagina() {

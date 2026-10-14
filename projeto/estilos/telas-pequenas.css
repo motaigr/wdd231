@@ -115,10 +115,13 @@ textarea {
   justify-content: space-between;
 }
 
+/* Fundo explícito na marca e no botão: algumas ferramentas de contraste
+   não enxergam o fundo do cabeçalho e comparam com o bege do body */
 .marca {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  background-color: var(--principal);
   color: var(--branco);
   text-decoration: none;
 }
@@ -137,12 +140,13 @@ textarea {
   display: block;
   font-weight: 500;
   font-size: 0.85rem;
+  background-color: var(--principal);
   color: var(--secundaria);
   letter-spacing: 0.08em;
 }
 
 .botao-menu {
-  background: none;
+  background-color: var(--principal);
   border: 2px solid var(--secundaria);
   border-radius: var(--raio);
   color: var(--branco);
@@ -439,12 +443,16 @@ main {
   min-width: 200px;
 }
 
+/* Altura reservada antes do JavaScript preencher o contador e a lista,
+   para o conteúdo não "pular" quando os clubes carregam (layout shift) */
 .contador-clubes {
   margin: 0.5rem 0 0;
   font-size: 0.95rem;
+  min-height: 1.6em;
 }
 
 .lista-clubes {
+  min-height: 100vh;
   display: grid;
   gap: 1rem;
   margin-top: 1rem;
