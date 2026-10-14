@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Clubes | Guia do Rugby Brasileiro</title>
+  <meta name="description" content="Lista de clubes de rugby do Brasil com cidade, estado, região e ano de fundação. Filtre por região e salve seus favoritos.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Clubes | Guia do Rugby Brasileiro">
+  <meta property="og:description" content="Encontre clubes de rugby em todas as regiões do Brasil.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/projeto/imagens/capa-estadio.webp">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/projeto/clubes.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script type="module" src="scripts/clubes.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="marca">
+        <img src="imagens/logo.svg" alt="" width="44" height="44">
+        <p class="marca-nome">Guia do Rugby<span>Brasileiro</span></p>
+      </a>
+
+      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-principal"></button>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="clubes.html" class="ativo" aria-current="page">Clubes</a></li>
+          <li><a href="comece-a-jogar.html">Comece a Jogar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main id="conteudo">
+    <section class="titulo-pagina">
+      <h1>Clubes de rugby</h1>
+      <p>Os clubes do Ranking dos Clubes Brasileiros 2025, criado a partir do Diagnóstico dos Clubes da CBRu. Filtre pela sua região, veja os detalhes de cada clube e salve seus favoritos: eles ficam guardados neste navegador.</p>
+      <p class="nota-fonte">Fontes: <a href="https://www.instagram.com/p/DTiSmtMDU1E/" target="_blank" rel="noopener">ranking publicado pela comunidade Brasil Rugby</a> e diretório <a href="https://brasilrugby.com.br/onde-jogar/" target="_blank" rel="noopener">Onde Jogar da CBRu</a>. SPAC e União Pé Vermelho disputam competições nacionais, mas não responderam ao diagnóstico; por isso aparecem no fim da lista, sem posição.</p>
+    </section>
+
+    <div class="barra-filtros">
+      <label for="filtro-regiao">Filtrar por região:</label>
+      <select id="filtro-regiao" name="filtro-regiao">
+        <option value="todos">Todas as regiões</option>
+        <option value="Norte">Norte</option>
+        <option value="Nordeste">Nordeste</option>
+        <option value="Centro-Oeste">Centro-Oeste</option>
+        <option value="Sudeste">Sudeste</option>
+        <option value="Sul">Sul</option>
+        <option value="favoritos">★ Meus favoritos</option>
+      </select>
+    </div>
+    <p id="contador-clubes" class="contador-clubes" aria-live="polite"></p>
+
+    <!-- Cartões preenchidos via JavaScript a partir de dados/clubes.json -->
+    <div id="lista-clubes" class="lista-clubes">
+      <p class="mensagem">Carregando clubes...</p>
+    </div>
+
+    <!-- Modal com os detalhes do clube selecionado -->
+    <dialog id="modal-clube" class="modal-clube" aria-labelledby="titulo-modal">
+      <div id="conteudo-modal"></div>
+      <button type="button" id="botao-fechar-modal" class="botao-fechar">Fechar</button>
+    </dialog>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
+      <div class="rodape-coluna">
+        <h2>Contato</h2>
+        <p>Guia do Rugby Brasileiro</p>
+        <p>Curitiba - PR</p>
+        <p>E-mail: <a href="mailto:contato@guiadorugby.com.br">contato@guiadorugby.com.br</a></p>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Redes sociais</h2>
+        <ul>
+          <li><a href="https://github.com/motaigr" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/igor-augusto-mota-gonçalves-b85571234" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Créditos</h2>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota · WDD 231</p>
+        <p>Foto da capa: <a href="https://www.istockphoto.com/br/fotos/rugby" target="_blank" rel="noopener">iStock</a>. Esquemas de jogo: ilustrações próprias.</p>
+        <p>Fontes: Oswald e Source Sans 3 (Google Fonts).</p>
+        <p><a href="siteplan.html">Planejamento do site</a></p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Comece a Jogar | Guia do Rugby Brasileiro</title>
+  <meta name="description" content="Saiba como começar a jogar rugby: o que levar ao primeiro treino e como encontrar um clube perto de você.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Comece a Jogar | Guia do Rugby Brasileiro">
+  <meta property="og:description" content="Como começar no rugby e encontrar um clube perto de você.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/projeto/imagens/capa-estadio.webp">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/projeto/comece-a-jogar.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script type="module" src="scripts/formulario.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="marca">
+        <img src="imagens/logo.svg" alt="" width="44" height="44">
+        <p class="marca-nome">Guia do Rugby<span>Brasileiro</span></p>
+      </a>
+
+      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-principal"></button>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="comece-a-jogar.html" class="ativo" aria-current="page">Comece a Jogar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main id="conteudo">
+    <section class="titulo-pagina">
+      <h1>Comece a jogar</h1>
+      <p>Não precisa de experiência nem de um tipo físico específico: no rugby há posição para todo mundo. Veja como dar o primeiro passo e peça uma indicação de clube.</p>
+    </section>
+
+    <div class="grade-comece">
+      <div>
+        <section class="secao" aria-labelledby="titulo-passos">
+          <h2 id="titulo-passos">Primeiros passos</h2>
+          <ol class="passos">
+            <li>
+              <h3>Encontre um clube</h3>
+              <p>Procure na <a href="clubes.html">lista de clubes</a> ou preencha o formulário para receber uma indicação.</p>
+            </li>
+            <li>
+              <h3>Vá a um treino aberto</h3>
+              <p>A maioria dos clubes recebe iniciantes sem custo nas primeiras semanas. Basta avisar que é sua primeira vez.</p>
+            </li>
+            <li>
+              <h3>Aprenda o básico com segurança</h3>
+              <p>Os treinos começam com passe, recepção e técnica de tackle sem contato. O contato é introduzido aos poucos.</p>
+            </li>
+            <li>
+              <h3>Escolha sua modalidade</h3>
+              <p>Experimente o XV e o Sevens. Muitos clubes têm equipes masculinas, femininas e juvenis.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo-equipamento">
+          <h2 id="titulo-equipamento">O que levar</h2>
+          <ul class="lista-equipamento">
+            <li>Roupa de treino confortável (camiseta e short).</li>
+            <li>Chuteira de campo ou tênis com boa aderência.</li>
+            <li>Protetor bucal (recomendado desde o primeiro treino de contato).</li>
+            <li>Garrafa de água e disposição!</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ===================== FORMULÁRIO ===================== -->
+      <section class="secao" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Encontre um clube</h2>
+        <p>Preencha seus dados e indicaremos um clube na sua região.</p>
+
+        <form id="formulario-clube" class="formulario-clube" action="confirmacao.html" method="get">
+          <label for="nome">Nome completo *
+            <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+          </label>
+
+          <label for="email">E-mail *
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="voce@exemplo.com">
+          </label>
+
+          <label for="telefone">Telefone
+            <span class="dica-campo">Com DDD, ex.: (41) 99999-9999</span>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="[0-9()\s\-+]{10,}">
+          </label>
+
+          <div class="linha-dupla">
+            <label for="cidade">Cidade *
+              <input type="text" id="cidade" name="cidade" required autocomplete="address-level2">
+            </label>
+
+            <label for="estado">Estado *
+              <select id="estado" name="estado" required autocomplete="address-level1">
+                <option value="">Selecione</option>
+                <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                <option>SP</option><option>SE</option><option>TO</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Modalidade de interesse *</legend>
+            <label><input type="radio" name="modalidade" value="Rugby XV" required> Rugby XV</label>
+            <label><input type="radio" name="modalidade" value="Rugby Sevens"> Rugby Sevens</label>
+            <label><input type="radio" name="modalidade" value="Ainda não sei"> Ainda não sei</label>
+          </fieldset>
+
+          <label for="experiencia">Experiência com rugby
+            <select id="experiencia" name="experiencia">
+              <option value="nenhuma">Nunca joguei</option>
+              <option value="pouca">Já joguei algumas vezes</option>
+              <option value="experiente">Já joguei em clube</option>
+            </select>
+          </label>
+
+          <label for="mensagem">Mensagem (opcional)
+            <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+          </label>
+
+          <input type="hidden" id="data-envio" name="data-envio">
+
+          <button type="submit" class="botao-principal">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
+      <div class="rodape-coluna">
+        <h2>Contato</h2>
+        <p>Guia do Rugby Brasileiro</p>
+        <p>Curitiba - PR</p>
+        <p>E-mail: <a href="mailto:contato@guiadorugby.com.br">contato@guiadorugby.com.br</a></p>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Redes sociais</h2>
+        <ul>
+          <li><a href="https://github.com/motaigr" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/igor-augusto-mota-gonçalves-b85571234" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Créditos</h2>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota · WDD 231</p>
+        <p>Foto da capa: <a href="https://www.istockphoto.com/br/fotos/rugby" target="_blank" rel="noopener">iStock</a>. Esquemas de jogo: ilustrações próprias.</p>
+        <p>Fontes: Oswald e Source Sans 3 (Google Fonts).</p>
+        <p><a href="siteplan.html">Planejamento do site</a></p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

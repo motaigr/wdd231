@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Guia do Rugby Brasileiro | Início</title>
+  <meta name="description" content="Conheça o rugby no Brasil: história, seleções Tupis e Yaras, modalidades XV e Sevens e os principais campeonatos do país.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guia do Rugby Brasileiro | Início">
+  <meta property="og:description" content="História, seleções, modalidades e campeonatos do rugby no Brasil.">
+  <meta property="og:image" content="https://motaigr.github.io/wdd231/projeto/imagens/capa-estadio.webp">
+  <meta property="og:url" content="https://motaigr.github.io/wdd231/projeto/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script type="module" src="scripts/inicio.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="marca">
+        <img src="imagens/logo.svg" alt="" width="44" height="44">
+        <p class="marca-nome">Guia do Rugby<span>Brasileiro</span></p>
+      </a>
+
+      <!-- Botão hambúrguer: exibido apenas em telas pequenas -->
+      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-principal"></button>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="comece-a-jogar.html">Comece a Jogar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main id="conteudo">
+
+    <!-- Capa: imagem principal + título + chamada -->
+    <section class="capa">
+      <img src="imagens/capa-estadio.webp" alt="Estádio de rugby iluminado à noite, com os postes em H no centro do gramado" class="capa-imagem" width="612" height="344" fetchpriority="high">
+      <div class="capa-conteudo">
+        <h1>O rugby no Brasil</h1>
+        <p>Clubes em todas as regiões, seleções em crescimento e campeonatos o ano inteiro. Descubra o esporte e encontre um time perto de você.</p>
+        <a href="comece-a-jogar.html" class="botao-chamada">Encontre um clube</a>
+      </div>
+    </section>
+
+    <p id="mensagem-visita" class="mensagem-visita" aria-live="polite"></p>
+
+    <!-- Panorama: grade de duas colunas a partir de 768px -->
+    <div class="grade-panorama">
+
+      <section class="secao" aria-labelledby="titulo-historia">
+        <h2 id="titulo-historia">História</h2>
+        <p>O rugby chegou ao Brasil no fim do século XIX, trazido por imigrantes britânicos e por jovens brasileiros que estudaram na Inglaterra. Os primeiros jogos aconteceram em clubes de São Paulo e do Rio de Janeiro.</p>
+        <p>Durante boa parte do século XX, o esporte ficou restrito a poucos clubes. Com a criação de uma confederação nacional, a profissionalização da gestão e a volta do rugby aos Jogos Olímpicos na versão Sevens, o número de praticantes cresceu e hoje há equipes em todas as regiões do país.</p>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-selecoes">
+        <h2 id="titulo-selecoes">Seleções</h2>
+        <div class="selecoes">
+          <article class="selecao">
+            <h3>Tupis</h3>
+            <p>Seleção masculina. Disputa competições sul-americanas e das Américas no XV e no Sevens.</p>
+          </article>
+          <article class="selecao">
+            <h3>Yaras</h3>
+            <p>Seleção feminina, principal força do Brasil no Sevens. Disputa o HSBC SVNS, o circuito mundial de Rugby Sevens.</p>
+          </article>
+        </div>
+        <p>As duas seleções disputaram o torneio de Sevens dos Jogos Olímpicos Rio 2016.</p>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-modalidades">
+        <h2 id="titulo-modalidades">Modalidades</h2>
+        <div class="modalidades">
+          <figure class="modalidade">
+            <img src="imagens/rugby-xv.svg" alt="Esquema de campo com quinze jogadores de cada equipe" width="400" height="240" loading="lazy">
+            <figcaption>
+              <strong>Rugby XV</strong>
+              Quinze jogadores por time, dois tempos de 40 minutos. É o formato tradicional, com scrums e lineouts.
+            </figcaption>
+          </figure>
+          <figure class="modalidade">
+            <img src="imagens/rugby-sevens.svg" alt="Esquema de campo com sete jogadores de cada equipe" width="400" height="240" loading="lazy">
+            <figcaption>
+              <strong>Rugby Sevens</strong>
+              Sete jogadores por time, dois tempos de 7 minutos. Mais rápido e com muito espaço; é a versão olímpica.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-campeonatos">
+        <h2 id="titulo-campeonatos">Campeonatos</h2>
+        <ul class="lista-campeonatos">
+          <li><strong>Campeonato Brasileiro de XV</strong>: reúne os principais clubes do país na elite nacional.</li>
+          <li><strong>Circuito Brasileiro de Sevens</strong>: etapas masculinas e femininas ao longo do ano.</li>
+          <li><strong>Campeonatos estaduais</strong>: Paulista, Paranaense, Gaúcho, Catarinense, Carioca, Mineiro e outros.</li>
+          <li><strong>Torneios regionais</strong>: competições do Nordeste, Centro-Oeste e Norte ajudam a expandir o esporte.</li>
+          <li><strong>Super Rugby Americas</strong>: o Brasil é representado pela franquia Cobras.</li>
+          <li><strong>HSBC SVNS</strong>: circuito mundial de Rugby Sevens, disputado pelas Yaras. Em março de 2026, jogando em São Paulo, elas conquistaram o título da etapa ao vencer o Quênia por 24 a 12 e garantiram a última vaga na World Championship Series, com etapas em Hong Kong, Valladolid e Bordeaux. Em 2027, o Estádio do Nacional, em São Paulo, recebe de novo a etapa final do SVNS 2, nos dias 27 e 28 de fevereiro.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Clubes sorteados do JSON -->
+    <section class="secao" aria-labelledby="titulo-destaque">
+      <h2 id="titulo-destaque">Destaques do ranking 2025</h2>
+      <p>Os três clubes mais bem avaliados no Diagnóstico dos Clubes da CBRu.</p>
+      <div id="clubes-destaque" class="clubes-destaque">
+        <p class="mensagem">Carregando clubes...</p>
+      </div>
+      <a href="clubes.html" class="botao-principal">Ver todos os clubes</a>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
+      <div class="rodape-coluna">
+        <h2>Contato</h2>
+        <p>Guia do Rugby Brasileiro</p>
+        <p>Curitiba - PR</p>
+        <p>E-mail: <a href="mailto:contato@guiadorugby.com.br">contato@guiadorugby.com.br</a></p>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Redes sociais</h2>
+        <ul>
+          <li><a href="https://github.com/motaigr" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/igor-augusto-mota-gonçalves-b85571234" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Créditos</h2>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota · WDD 231</p>
+        <p>Foto da capa: <a href="https://www.istockphoto.com/br/fotos/rugby" target="_blank" rel="noopener">iStock</a>. Esquemas de jogo: ilustrações próprias.</p>
+        <p>Fontes: Oswald e Source Sans 3 (Google Fonts).</p>
+        <p><a href="siteplan.html">Planejamento do site</a></p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

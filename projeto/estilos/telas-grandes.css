@@ -1,0 +1,122 @@
+/* =========================================================
+   Guia do Rugby Brasileiro - telas médias e grandes
+   As regras base ficam em telas-pequenas.css.
+   ========================================================= */
+
+/* Telas médias (~600px) */
+@media (min-width: 600px) {
+  .lista-clubes,
+  .modalidades,
+  .selecoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resumo-envio {
+    grid-template-columns: max-content 1fr;
+    column-gap: 1.5rem;
+  }
+
+  .resumo-envio dt,
+  .resumo-envio dd {
+    padding: 0.5rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--borda);
+  }
+}
+
+/* Telas médias maiores (768px): menu horizontal e grade de duas colunas */
+@media (min-width: 768px) {
+  .botao-menu {
+    display: none;
+  }
+
+  .nav-principal {
+    display: block;
+    width: auto;
+  }
+
+  .nav-principal ul {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav-principal a {
+    border-top: none;
+    border-radius: var(--raio);
+  }
+
+  .capa {
+    margin: 0;
+    border-radius: 0 0 var(--raio) var(--raio);
+  }
+
+  .capa-imagem {
+    height: 420px;
+  }
+
+  /* Texto sobreposto à imagem principal */
+  .capa-conteudo {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    max-width: 520px;
+    background-color: #1D3557E6;
+    border-left: 6px solid var(--destaque);
+    border-radius: var(--raio);
+    padding: 1.5rem;
+  }
+
+  .capa-conteudo h1 {
+    font-size: 2.6rem;
+  }
+
+  .titulo-pagina h1 {
+    font-size: 2.6rem;
+  }
+
+  .grade-panorama {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.5rem;
+  }
+
+  .secao {
+    padding: 1.75rem;
+  }
+
+  .grade-confirmacao {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.5rem;
+    align-items: start;
+  }
+
+  .grade-comece {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.5rem;
+    align-items: start;
+  }
+
+  .formulario-clube .linha-dupla {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  .rodape-conteudo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Telas grandes (1024px) */
+@media (min-width: 1024px) {
+  .lista-clubes,
+  .clubes-destaque {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clubes-destaque .mini-clube {
+    flex-direction: column;
+    text-align: center;
+  }
+}

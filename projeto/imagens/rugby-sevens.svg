@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#4F7F3E"/>
+  <g stroke="#FFFFFF" stroke-width="3" opacity="0.6">
+    <line x1="40" y1="0" x2="40" y2="240"/>
+    <line x1="200" y1="0" x2="200" y2="240"/>
+    <line x1="360" y1="0" x2="360" y2="240"/>
+  </g>
+  <!-- 7 jogadores de cada lado, com mais espaço em campo -->
+  <g fill="#1D3557">
+    <circle cx="170" cy="80" r="9"/><circle cx="170" cy="110" r="9"/><circle cx="170" cy="140" r="9"/>
+    <circle cx="130" cy="60" r="9"/><circle cx="110" cy="120" r="9"/><circle cx="90" cy="180" r="9"/>
+    <circle cx="70" cy="40" r="9"/>
+  </g>
+  <g fill="#A63D2F">
+    <circle cx="230" cy="80" r="9"/><circle cx="230" cy="110" r="9"/><circle cx="230" cy="140" r="9"/>
+    <circle cx="270" cy="60" r="9"/><circle cx="290" cy="120" r="9"/><circle cx="310" cy="180" r="9"/>
+    <circle cx="330" cy="40" r="9"/>
+  </g>
+  <ellipse cx="200" cy="110" rx="9" ry="6" fill="#FBF8F3"/>
+  <text x="200" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">7 x 7</text>
+</svg>

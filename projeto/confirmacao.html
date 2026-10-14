@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags básicas -->
+  <title>Confirmação | Guia do Rugby Brasileiro</title>
+  <meta name="description" content="Confirmação do pedido de indicação de clube de rugby.">
+  <meta name="author" content="Igor Mota">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+  <script type="module" src="scripts/confirmacao.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="marca">
+        <img src="imagens/logo.svg" alt="" width="44" height="44">
+        <p class="marca-nome">Guia do Rugby<span>Brasileiro</span></p>
+      </a>
+
+      <button id="botao-menu" class="botao-menu" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-principal"></button>
+
+      <nav id="nav-principal" class="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="comece-a-jogar.html" class="ativo">Comece a Jogar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <main id="conteudo">
+    <section class="titulo-pagina">
+      <h1 id="titulo-confirmacao">Obrigado!</h1>
+      <p>Recebemos seu pedido. Em breve entraremos em contato com a indicação de um clube perto de você.</p>
+    </section>
+
+    <!-- Duas colunas a partir de 768px: resumo do envio + clubes do estado escolhido -->
+    <div class="grade-confirmacao">
+      <section class="secao" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Dados enviados</h2>
+        <dl class="resumo-envio">
+          <dt>Nome</dt><dd id="resumo-nome"></dd>
+          <dt>E-mail</dt><dd id="resumo-email"></dd>
+          <dt>Telefone</dt><dd id="resumo-telefone"></dd>
+          <dt>Cidade</dt><dd id="resumo-local"></dd>
+          <dt>Modalidade</dt><dd id="resumo-modalidade"></dd>
+          <dt>Experiência</dt><dd id="resumo-experiencia"></dd>
+          <dt>Enviado em</dt><dd id="resumo-data"></dd>
+        </dl>
+      </section>
+
+      <!-- Preenchido via JavaScript a partir de dados/clubes.json -->
+      <section class="secao" aria-labelledby="titulo-clubes-estado">
+        <h2 id="titulo-clubes-estado">Clubes no seu estado</h2>
+        <p id="descricao-clubes-estado">Carregando clubes...</p>
+        <ul id="clubes-estado" class="clubes-estado"></ul>
+        <a id="link-clubes-regiao" href="clubes.html" class="botao-principal">Ver todos os clubes</a>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape-site">
+    <div class="rodape-conteudo">
+      <div class="rodape-coluna">
+        <h2>Contato</h2>
+        <p>Guia do Rugby Brasileiro</p>
+        <p>Curitiba - PR</p>
+        <p>E-mail: <a href="mailto:contato@guiadorugby.com.br">contato@guiadorugby.com.br</a></p>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Redes sociais</h2>
+        <ul>
+          <li><a href="https://github.com/motaigr" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/igor-augusto-mota-gonçalves-b85571234" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="rodape-coluna">
+        <h2>Créditos</h2>
+        <p>&copy; <span id="ano-atual"></span> Igor Mota · WDD 231</p>
+        <p>Foto da capa: <a href="https://www.istockphoto.com/br/fotos/rugby" target="_blank" rel="noopener">iStock</a>. Esquemas de jogo: ilustrações próprias.</p>
+        <p>Fontes: Oswald e Source Sans 3 (Google Fonts).</p>
+        <p><a href="siteplan.html">Planejamento do site</a></p>
+        <p>Última modificação: <span id="ultima-modificacao"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,590 @@
+{
+  "fonte": "Ranking dos Clubes Brasileiros 2025 - Diagnóstico dos Clubes (CBRu)",
+  "clubes": [
+    {
+      "id": "sao-jose",
+      "posicao": 1,
+      "nome": "São José",
+      "cidade": "São José dos Campos",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 72.2
+    },
+    {
+      "id": "jacarei",
+      "posicao": 2,
+      "nome": "Jacareí",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 72.1
+    },
+    {
+      "id": "rugby-para-todos-leoes-e-leoas",
+      "posicao": 3,
+      "nome": "Rugby para Todos Leões e Leoas",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 70.9
+    },
+    {
+      "id": "pasteur",
+      "posicao": 4,
+      "nome": "Pasteur",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 70.4
+    },
+    {
+      "id": "poli",
+      "posicao": 5,
+      "nome": "Poli",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 65.6
+    },
+    {
+      "id": "desterro",
+      "posicao": 6,
+      "nome": "Desterro",
+      "cidade": null,
+      "estado": "SC",
+      "regiao": "Sul",
+      "percentual": 61.3
+    },
+    {
+      "id": "melina",
+      "posicao": 7,
+      "nome": "Melina",
+      "cidade": "Cuiabá",
+      "estado": "MT",
+      "regiao": "Centro-Oeste",
+      "percentual": 60.9
+    },
+    {
+      "id": "niteroi",
+      "posicao": 8,
+      "nome": "Niterói",
+      "cidade": null,
+      "estado": "RJ",
+      "regiao": "Sudeste",
+      "percentual": 52.0
+    },
+    {
+      "id": "pinda",
+      "posicao": 9,
+      "nome": "Pinda",
+      "cidade": "Pindamonhangaba",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 47.5
+    },
+    {
+      "id": "porto-seguro",
+      "posicao": 10,
+      "nome": "Porto Seguro",
+      "cidade": null,
+      "estado": "BA",
+      "regiao": "Nordeste",
+      "percentual": 46.8
+    },
+    {
+      "id": "taubate",
+      "posicao": 11,
+      "nome": "Taubaté",
+      "cidade": "Taubaté",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 46.7
+    },
+    {
+      "id": "curitiba",
+      "posicao": 12,
+      "nome": "Curitiba",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "regiao": "Sul",
+      "percentual": 46.6
+    },
+    {
+      "id": "farrapos",
+      "posicao": 13,
+      "nome": "Farrapos",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 46.4
+    },
+    {
+      "id": "rio-branco",
+      "posicao": 14,
+      "nome": "Rio Branco",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 46.2
+    },
+    {
+      "id": "antiqua",
+      "posicao": 15,
+      "nome": "Antiqua",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 45.7
+    },
+    {
+      "id": "japuacu",
+      "posicao": 16,
+      "nome": "Japuaçu",
+      "cidade": null,
+      "estado": "PA",
+      "regiao": "Norte",
+      "percentual": 45.1
+    },
+    {
+      "id": "joaca",
+      "posicao": 17,
+      "nome": "Joaca",
+      "cidade": null,
+      "estado": "SC",
+      "regiao": "Sul",
+      "percentual": 44.6
+    },
+    {
+      "id": "ilhabela",
+      "posicao": 18,
+      "nome": "Ilhabela",
+      "cidade": "Ilhabela",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 42.9
+    },
+    {
+      "id": "foz",
+      "posicao": 19,
+      "nome": "Foz",
+      "cidade": "Foz do Iguaçu",
+      "estado": "PR",
+      "regiao": "Sul",
+      "percentual": 42.7
+    },
+    {
+      "id": "bh",
+      "posicao": 20,
+      "nome": "BH",
+      "cidade": null,
+      "estado": "MG",
+      "regiao": "Sudeste",
+      "percentual": 42.5
+    },
+    {
+      "id": "tornados-indaiatuba",
+      "posicao": 21,
+      "nome": "Tornados Indaiatuba",
+      "cidade": "Indaiatuba",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 40.4
+    },
+    {
+      "id": "iguanas-sjc",
+      "posicao": 22,
+      "nome": "Iguanas SJC",
+      "cidade": "São José dos Campos",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 40.3
+    },
+    {
+      "id": "nova-lima",
+      "posicao": 23,
+      "nome": "Nova Lima",
+      "cidade": "Nova Lima",
+      "estado": "MG",
+      "regiao": "Sudeste",
+      "percentual": 39.1
+    },
+    {
+      "id": "sesi-americana",
+      "posicao": 24,
+      "nome": "SESI Americana",
+      "cidade": "Americana",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 37.3
+    },
+    {
+      "id": "charrua",
+      "posicao": 25,
+      "nome": "Charrua",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 36.4
+    },
+    {
+      "id": "toledo",
+      "posicao": 26,
+      "nome": "Toledo",
+      "cidade": "Toledo",
+      "estado": "PR",
+      "regiao": "Sul",
+      "percentual": 36.3
+    },
+    {
+      "id": "tucanos",
+      "posicao": 27,
+      "nome": "Tucanos",
+      "cidade": "São João da Boa Vista",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 35.0
+    },
+    {
+      "id": "cabanos",
+      "posicao": 28,
+      "nome": "Cabanos",
+      "cidade": null,
+      "estado": "PA",
+      "regiao": "Norte",
+      "percentual": 34.5
+    },
+    {
+      "id": "acemira",
+      "posicao": 29,
+      "nome": "Acemira",
+      "cidade": null,
+      "estado": "PA",
+      "regiao": "Norte",
+      "percentual": 34.2
+    },
+    {
+      "id": "urutu",
+      "posicao": 30,
+      "nome": "Urutu",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 33.9
+    },
+    {
+      "id": "delta",
+      "posicao": 31,
+      "nome": "Delta",
+      "cidade": null,
+      "estado": "PI",
+      "regiao": "Nordeste",
+      "percentual": 32.9
+    },
+    {
+      "id": "centauros",
+      "posicao": 32,
+      "nome": "Centauros",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 32.8
+    },
+    {
+      "id": "campo-grande",
+      "posicao": 33,
+      "nome": "Campo Grande",
+      "cidade": null,
+      "estado": "MS",
+      "regiao": "Centro-Oeste",
+      "percentual": 32.6
+    },
+    {
+      "id": "el-shaddai",
+      "posicao": 34,
+      "nome": "El-Shaddai",
+      "cidade": null,
+      "estado": "RJ",
+      "regiao": "Sudeste",
+      "percentual": 31.6
+    },
+    {
+      "id": "ymbores",
+      "posicao": 35,
+      "nome": "Ymborés",
+      "cidade": null,
+      "estado": "BA",
+      "regiao": "Nordeste",
+      "percentual": 29.9
+    },
+    {
+      "id": "espm",
+      "posicao": 36,
+      "nome": "ESPM",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 29.3
+    },
+    {
+      "id": "rio-preto-hydra",
+      "posicao": 37,
+      "nome": "Rio Preto Hydra",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 28.7
+    },
+    {
+      "id": "carioca",
+      "posicao": 38,
+      "nome": "Carioca",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 28.7
+    },
+    {
+      "id": "sao-carlos",
+      "posicao": 39,
+      "nome": "São Carlos",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 27.7
+    },
+    {
+      "id": "ceara",
+      "posicao": 40,
+      "nome": "Ceará",
+      "cidade": null,
+      "estado": "CE",
+      "regiao": "Nordeste",
+      "percentual": 26.4
+    },
+    {
+      "id": "brummers",
+      "posicao": 41,
+      "nome": "Brummers",
+      "cidade": "Ivoti",
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 24.9
+    },
+    {
+      "id": "xavantes",
+      "posicao": 42,
+      "nome": "Xavantes",
+      "cidade": null,
+      "estado": "GO",
+      "regiao": "Centro-Oeste",
+      "percentual": 23.9
+    },
+    {
+      "id": "planalto",
+      "posicao": 43,
+      "nome": "Planalto",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 23.8
+    },
+    {
+      "id": "alvorada",
+      "posicao": 44,
+      "nome": "Alvorada",
+      "cidade": null,
+      "estado": "MG",
+      "regiao": "Sudeste",
+      "percentual": 22.9
+    },
+    {
+      "id": "ita",
+      "posicao": 45,
+      "nome": "Ita",
+      "cidade": null,
+      "estado": "RJ",
+      "regiao": "Sudeste",
+      "percentual": 22.8
+    },
+    {
+      "id": "caruaru",
+      "posicao": 46,
+      "nome": "Caruaru",
+      "cidade": null,
+      "estado": "PE",
+      "regiao": "Nordeste",
+      "percentual": 22.0
+    },
+    {
+      "id": "fea",
+      "posicao": 47,
+      "nome": "FEA",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 21.8
+    },
+    {
+      "id": "anhembi-morumbi",
+      "posicao": 48,
+      "nome": "Anhembi Morumbi",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 21.6
+    },
+    {
+      "id": "puc",
+      "posicao": 49,
+      "nome": "PUC",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 21.4
+    },
+    {
+      "id": "goiania",
+      "posicao": 50,
+      "nome": "Goiânia",
+      "cidade": null,
+      "estado": "GO",
+      "regiao": "Centro-Oeste",
+      "percentual": 20.8
+    },
+    {
+      "id": "bulldogs",
+      "posicao": 51,
+      "nome": "Bulldogs",
+      "cidade": null,
+      "estado": "PR",
+      "regiao": "Sul",
+      "percentual": 20.7
+    },
+    {
+      "id": "sjb",
+      "posicao": 52,
+      "nome": "SJB",
+      "cidade": null,
+      "estado": "SC",
+      "regiao": "Sul",
+      "percentual": 19.7
+    },
+    {
+      "id": "joao-pessoa",
+      "posicao": 53,
+      "nome": "João Pessoa",
+      "cidade": null,
+      "estado": "PB",
+      "regiao": "Nordeste",
+      "percentual": 17.8
+    },
+    {
+      "id": "grua",
+      "posicao": 54,
+      "nome": "GRUA",
+      "cidade": null,
+      "estado": "AM",
+      "regiao": "Norte",
+      "percentual": 17.1
+    },
+    {
+      "id": "colonos",
+      "posicao": 55,
+      "nome": "Colonos",
+      "cidade": null,
+      "estado": "RS",
+      "regiao": "Sul",
+      "percentual": 17.0
+    },
+    {
+      "id": "each",
+      "posicao": 56,
+      "nome": "EACH",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 16.0
+    },
+    {
+      "id": "uerj",
+      "posicao": 57,
+      "nome": "UERJ",
+      "cidade": null,
+      "estado": "RJ",
+      "regiao": "Sudeste",
+      "percentual": 13.9
+    },
+    {
+      "id": "vitoria",
+      "posicao": 58,
+      "nome": "Vitória",
+      "cidade": null,
+      "estado": "ES",
+      "regiao": "Sudeste",
+      "percentual": 13.1
+    },
+    {
+      "id": "pro-vida",
+      "posicao": 59,
+      "nome": "Pró-Vida",
+      "cidade": null,
+      "estado": "DF",
+      "regiao": "Centro-Oeste",
+      "percentual": 11.1
+    },
+    {
+      "id": "uberlandia",
+      "posicao": 60,
+      "nome": "Uberlândia",
+      "cidade": null,
+      "estado": "MG",
+      "regiao": "Sudeste",
+      "percentual": 10.0
+    },
+    {
+      "id": "santa-rita",
+      "posicao": 61,
+      "nome": "Santa Rita",
+      "cidade": null,
+      "estado": "MG",
+      "regiao": "Sudeste",
+      "percentual": 9.8
+    },
+    {
+      "id": "sertoes",
+      "posicao": 62,
+      "nome": "Sertões",
+      "cidade": null,
+      "estado": "CE",
+      "regiao": "Nordeste",
+      "percentual": 9.8
+    },
+    {
+      "id": "puccamp",
+      "posicao": 63,
+      "nome": "PUCCAMP",
+      "cidade": null,
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": 9.3
+    },
+    {
+      "id": "spac",
+      "posicao": null,
+      "nome": "SPAC",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "regiao": "Sudeste",
+      "percentual": null
+    },
+    {
+      "id": "uniao-pe-vermelho",
+      "posicao": null,
+      "nome": "União Pé Vermelho",
+      "cidade": "Londrina",
+      "estado": "PR",
+      "regiao": "Sul",
+      "percentual": null
+    }
+  ]
+}
